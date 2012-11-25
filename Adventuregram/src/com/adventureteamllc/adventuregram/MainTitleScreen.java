@@ -14,7 +14,12 @@ import sofia.app.Screen;
  */
 public class MainTitleScreen extends Screen {
 
-    //TO DO:
-
+   /**
+     *
+     */
+    public void initialize()
+    {
+        //TO DO:
+    }
 
 }

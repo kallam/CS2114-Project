@@ -7,6 +7,6 @@ public interface Story
 
     public String getCommands();
 
-    public String getNextText(String command);
+    public Story getNextStory(String command);
 
 }

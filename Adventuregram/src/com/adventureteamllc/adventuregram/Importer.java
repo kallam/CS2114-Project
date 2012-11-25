@@ -7,7 +7,9 @@ public interface Importer
 
     public String getDescription();
 
-    public String getAndStoreStoryChunks();
+    public String getAuthor();
+
+    public String getStoryChunks();
 
 
 
