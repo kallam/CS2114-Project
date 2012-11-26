@@ -1,5 +1,8 @@
 package com.adventureteamllc.adventuregram;
 
+
+import java.io.FileNotFoundException;
+import java.io.File;
 import java.util.regex.Pattern;
 import java.util.*;
 // -------------------------------------------------------------------------
@@ -23,21 +26,49 @@ public class Import implements Importer
      */
     public Import(String file)
     {
-        Scanner in = new Scanner(file);
-        Pattern pat = Pattern.compile("[title]*[/title]");
-        title = in.next(pat);
-        title = title.substring(7, title.length() - 8);
+        title = "";
+        description = "";
+        author = "";
+        story = "";
+        try
+        {
+            Scanner in = new Scanner(new File(file));
 
-        pat = Pattern.compile("[author]*[/author]");
-        author = in.next(pat);
-        author = author.substring(8, author.length() - 9);
+            Pattern pat = Pattern.compile("(\\[\\/title\\])");
+            in.useDelimiter(pat);
+            title = in.next();
+            title = title.substring(7, title.length());
 
-        pat = Pattern.compile("[description]*[/description]");
-        description = in.next(pat);
-        description = description.substring(12, description.length() - 13);
+            in.useDelimiter("\\]");
+            in.next();
 
-        story = in.next();
-        in.close();
+            pat = Pattern.compile("(\\[\\/author\\])");
+            in.useDelimiter(pat);
+            author = in.next();
+            author = author.substring(11, author.length());
+
+            in.useDelimiter("\\]");
+            in.next();
+
+            pat = Pattern.compile("(\\[\\/description\\])");
+            in.useDelimiter(pat);
+            description = in.next();
+            description = description.substring(16, description.length());
+
+            in.useDelimiter("\\[");
+            in.next();
+            while (in.hasNextLine())
+            {
+                story = story + in.nextLine();
+            }
+
+            in.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found");
+
+        }
     }
 
     public String getAuthor()

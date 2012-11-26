@@ -39,8 +39,9 @@ public class ImportTest extends student.TestCase
     public void testImport()
     {
         assertEquals(imp.getTitle(), "Test Story");
+        assertEquals(imp.getAuthor(), "Some Person");
         assertEquals(imp.getDescription(), "This is the description.");
-        assertEquals(imp.getAuthor(), "Test Story");
+
         assertEquals(imp.getStoryChunks(), "[story NumberOfEvents = <3>][start]" +
         		"[t] You are standing in a room[/t][c]*RUN* [1]*REPEAT* [start]" +
         		"*FAIL* [end][/c][/start][1][t] You run.[/t][c]*RUN* [1]*FAIL* " +
