@@ -2,29 +2,16 @@ package com.adventureteamllc.adventuregram;
 
 import java.util.HashMap;
 
-public class Library
+public interface Library
 {
-    private HashMap<String, Import> lib;
-    public Library()
-    {
-        lib = new HashMap<String, Import>();
-    }
 
-    public void importStory(String file)
-    {
-        Import temp = new Import(file);
-        lib.put(temp.getTitle(), temp);
-    }
+    public Importer importStory(String file);
 
-    public HashMap<String, Import> getLibrary()
-    {
-        return lib;
-    }
+    public HashMap<String, Importer> getlibrary();
 
-    public void removeStory(String title)
-    {
-        lib.remove(title);
-    }
+    public void removeStory();
+
+    public void playStory();
 
 
 }
