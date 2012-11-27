@@ -1,0 +1,15 @@
+[Title]Test Story
+[Author]Some Person
+[Description]This is the description.
+
+[start]
+[Text]You are standing in a room
+*RUN*[1] *REPEAT*[start] *FAIL*[end]
+
+[1]
+[Text] You run.
+*RUN*[1] *FAIL*[end] *TIMETRAVEL*[start]
+
+[end]
+[Text] This is the end.
+[/story]
