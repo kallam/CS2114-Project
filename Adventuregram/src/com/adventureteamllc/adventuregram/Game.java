@@ -29,12 +29,12 @@ public class Game
 
     //enables backtracking through story
     private Stack<Event> playerPath;
-    private MapEvents map;
+    private Story map;
 
     public Game()
     {
         playerPath = new Stack<Event>();
-        map = new MapEvents();
+        map = new Story();
         Event ev0 = new Event("title", "start");
         Event ev1 = new Event("title2", "asfasdf");
         Event ev2 = new Event("title3", "end");
