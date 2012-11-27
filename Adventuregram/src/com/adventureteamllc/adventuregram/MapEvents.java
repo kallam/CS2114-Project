@@ -35,7 +35,6 @@ public class MapEvents
 
     public Event getEvent(int i)
     {
-
         return events.get(i);
     }
 
