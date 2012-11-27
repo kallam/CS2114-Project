@@ -12,7 +12,7 @@ import java.util.*;
  *  @author Chris
  *  @version Nov 25, 2012
  */
-public class Import implements Importer
+public class Import
 {
     private String title;
     private String description;
