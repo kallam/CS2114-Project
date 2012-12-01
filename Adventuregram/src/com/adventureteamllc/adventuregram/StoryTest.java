@@ -3,7 +3,14 @@ package com.adventureteamllc.adventuregram;
 import junit.framework.TestCase;
 //import org.junit.Test;
 
-
+/**
+ * // -------------------------------------------------------------------------
+/**
+ * Tests Story Class.
+ *
+ *  @author Brian
+ *  @version Nov 30, 2012
+ */
 public class StoryTest
 extends TestCase
 {
