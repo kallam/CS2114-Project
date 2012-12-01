@@ -40,10 +40,24 @@ import java.util.ArrayList;
  */
 public class Event
 {
+    /**
+     * // -------------------------------------------------------------------------
+    /**
+     * Connection to link events together with a string along with it to
+     * describe their choice
+     *
+     *  @author Brian
+     *  @version Nov 30, 2012
+     */
     public static class Connection
     {
         public String descrip;
         public int index;
+        /**
+         * Initialize a connection
+         * @param s is new description
+         * @param i is index of the Event in the story arraylist
+         */
         public Connection(String s, int i)
         {
             descrip = s;
@@ -66,7 +80,11 @@ public class Event
     private Boolean end;
 
 
-
+    /**
+     * Initialize Event
+     * @param newTitle title of String
+     * @param newDescription description to show user
+     */
     public Event(String newTitle, String newDescription)
     {
         title = newTitle;
@@ -76,10 +94,18 @@ public class Event
         eventsAhead = new ArrayList<Connection>();
 
     }
+    /**
+     * Returns description
+     * @return String description
+     */
     public String getDescription()
     {
         return description;
     }
+    /**
+     * Num of connections so user has to enter a correct number
+     * @int num of connections to choose
+     */
     public int getNumConnections()
     {
         return eventsAhead.size();
