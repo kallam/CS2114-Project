@@ -4,7 +4,14 @@ package com.adventureteamllc.adventuregram;
 
 
 import junit.framework.TestCase;
-
+/**
+ * // -------------------------------------------------------------------------
+/**
+ *  Test Event Class
+ *
+ *  @author Brian
+ *  @version Nov 30, 2012
+ */
 public class EventTest
     extends TestCase
 {
@@ -12,6 +19,9 @@ public class EventTest
     private Event event;
     private Event.Connection connect;
 
+    /**
+     * Initialize test fixtures
+     */
     public void setUp()
     {
         event = new Event("title", "description");
