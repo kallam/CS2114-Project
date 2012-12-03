@@ -30,13 +30,6 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>TestStory.txt</name>
-			<type>1</type>
-			<locationURI>copy_PARENT/TestStory.txt</locationURI>
-		</link>
-	</linkedResources>
 	<variableList>
 		<variable>
 			<name>copy_PARENT</name>

@@ -2,7 +2,6 @@ package com.adventureteamllc.adventuregram;
 
 import sofia.app.Screen;
 
-
 // -------------------------------------------------------------------------
 /**
  *  Write a one-sentence summary of your class here.
