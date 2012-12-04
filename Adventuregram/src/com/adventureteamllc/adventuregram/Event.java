@@ -1,9 +1,5 @@
 package com.adventureteamllc.adventuregram;
 
-
-
-import java.util.ArrayList;
-
 /**
  * // -------------------------------------------------------------------------
 /**
@@ -40,43 +36,16 @@ import java.util.ArrayList;
  */
 public class Event
 {
-    /**
-     * // -------------------------------------------------------------------------
-    /**
-     * Connection to link events together with a string along with it to
-     * describe their choice
-     *
-     *  @author Brian
-     *  @version Nov 30, 2012
-     */
-    public static class Connection
-    {
-        public String descrip;
-        public int index;
-        /**
-         * Initialize a connection
-         * @param s is new description
-         * @param i is index of the Event in the story arraylist
-         */
-        public Connection(String s, int i)
-        {
-            descrip = s;
-            index = i;
-        }
-
-    }
-    //needs to point to other events, use events arraylist to store them
-
-    private ArrayList<Connection> eventsAhead;
-   // private Event previous;
+    private Command[] commands;
+    // private Event previous;
 
     private String title;
     private String description;
 
-   // private String imageLink;
+    // private String imageLink;
 
     //true if beginning event or end event
-  //  private Boolean start;
+    //  private Boolean start;
     private Boolean end;
 
 
@@ -89,9 +58,9 @@ public class Event
     {
         title = newTitle;
         description = newDescription;
-       // start = false;
+        // start = false;
         end = false;
-        eventsAhead = new ArrayList<Connection>();
+        commands = new Command[4];
 
     }
     /**
@@ -103,19 +72,25 @@ public class Event
         return description;
     }
     /**
-     * Num of connections so user has to enter a correct number
-     * @int num of connections to choose
+     * Number of connections so user has to enter a correct number
+     * @return Number of connections to choose
      */
     public int getNumConnections()
     {
-        return eventsAhead.size();
+        return commands.length;
     }
 
-    public Connection getConnection(int choice)
+    // ----------------------------------------------------------
+    /**
+     * Gets a command from the commands array
+     * @param choice Position in the commands array
+     * @return Command from the commands array
+     */
+    public Command getCommand(int choice)
     {
         if (choice >= 0 && choice < getNumConnections())
         {
-            return eventsAhead.get(choice);
+            return commands[choice];
         }
         else
         {
@@ -126,9 +101,16 @@ public class Event
 
 
 
-    public void addConnection(Connection con)
+    // ----------------------------------------------------------
+    /**
+     * Adds command to the commands array
+     * @param com
+     */
+    public void addCommand(Command com)
     {
-        eventsAhead.add(con);
+        if (commands.length < 4) {
+            commands[commands.length] = com;
+        }
     }
 
     public void setEnd()

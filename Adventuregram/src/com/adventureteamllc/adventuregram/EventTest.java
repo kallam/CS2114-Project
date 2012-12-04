@@ -17,7 +17,7 @@ public class EventTest
 {
 
     private Event event;
-    private Event.Connection connect;
+    private Command command;
 
     /**
      * Initialize test fixtures
@@ -25,7 +25,7 @@ public class EventTest
     public void setUp()
     {
         event = new Event("title", "description");
-        connect = new Event.Connection("this way", 0);
+        command = new Command("this way", "0");
     }
 
     /**
@@ -34,13 +34,13 @@ public class EventTest
     public void testEvent()
     {
         assertEquals("description", event.getDescription());
-        event.addConnection(connect);
+        event.addCommand(command);
         assertEquals(1, event.getNumConnections());
         assertFalse(event.isEnd());
         event.setEnd();
         assertTrue(event.isEnd());
-        assertEquals(connect, event.getConnection(0));
-        assertNull(event.getConnection(5));
+        assertEquals(command, event.getCommand(0));
+        assertNull(event.getCommand(5));
     }
 
 

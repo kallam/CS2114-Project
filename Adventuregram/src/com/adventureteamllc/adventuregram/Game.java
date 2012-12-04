@@ -40,9 +40,9 @@ public class Game
         Event ev2 = new Event("title3", "end");
         Event ev5= new Event("title5", "other choice");
         ev2.setEnd();
-        ev0.addConnection(new Event.Connection("go to ev1", 1));
-        ev0.addConnection(new Event.Connection("go to ev5 but don't cause it doesn't go to end", 3));
-        ev1.addConnection(new Event.Connection("got to ev2", 2));
+        ev0.addCommand(new Command("go to ev1", "1"));
+        ev0.addCommand(new Command("go to ev5 but don't cause it doesn't go to end", "3"));
+        ev1.addCommand(new Command("got to ev2", "2"));
 
         map.addEvent(ev0);
         map.addEvent(ev1);
@@ -71,7 +71,7 @@ public class Game
             int count = playerPath.peek().getNumConnections();
             for (int i = 0; i <  count; i++)
             {
-                System.out.println(""+(i+1) + " : "+playerPath.peek().getConnection(i).descrip);
+                System.out.println(""+(i+1) + " : "+playerPath.peek().getCommand(i).getName());
             }
 
             s = in.nextLine();
@@ -79,7 +79,7 @@ public class Game
             int offset = ch - '1';
             if (offset >= 0 && offset < count)
             {
-                playerPath.push(map.getEvent(playerPath.peek().getConnection(offset).index));
+                playerPath.push(map.getEvent(playerPath.peek().getCommand(offset).getTarget()));
             }
 
             //System.out.println(":"+ s);
