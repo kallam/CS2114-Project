@@ -46,7 +46,7 @@ public class Event
 
     //true if beginning event or end event
     //  private Boolean start;
-    private Boolean end;
+   // private Boolean end;
 
 
     /**
@@ -59,9 +59,17 @@ public class Event
         title = newTitle;
         description = newDescription;
         // start = false;
-        end = false;
+      //  end = false;
         commands = new Command[4];
 
+    }
+    /**
+     * Return title/id of event
+     * @return title of event
+     */
+    public String getTitle()
+    {
+        return title;
     }
     /**
      * Returns description
@@ -113,6 +121,7 @@ public class Event
         }
     }
 
+    /**
     public void setEnd()
     {
         end = true;
@@ -129,6 +138,7 @@ public class Event
             return false;
         }
     }
+    **/
 
 
 
