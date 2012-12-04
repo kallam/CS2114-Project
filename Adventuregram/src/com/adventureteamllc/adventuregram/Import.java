@@ -17,7 +17,7 @@ public class Import
     private String title;
     private String description;
     private String author;
-    private String story;
+    private Story story;
 
     // ----------------------------------------------------------
     /**
@@ -29,7 +29,6 @@ public class Import
         title = "";
         description = "";
         author = "";
-        story = "";
         try
         {
             Scanner in = new Scanner(new File(file));
@@ -59,7 +58,7 @@ public class Import
             in.next();
             while (in.hasNextLine())
             {
-                story = story + in.nextLine();
+                //story = story + in.nextLine();
             }
 
             in.close();
@@ -86,7 +85,12 @@ public class Import
         return description;
     }
 
-    public String getStoryChunks()
+    // ----------------------------------------------------------
+    /**
+     * Returns a story object comprised of the parsed text file
+     * @return Story object
+     */
+    public Story getStory()
     {
         return story;
     }

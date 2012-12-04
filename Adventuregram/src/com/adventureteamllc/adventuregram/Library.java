@@ -1,5 +1,6 @@
 package com.adventureteamllc.adventuregram;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 // -------------------------------------------------------------------------
@@ -11,7 +12,7 @@ import java.util.HashMap;
  */
 public class Library
 {
-    private HashMap<String, Import> lib;
+    private ArrayList<Story> lib;
 
     // ----------------------------------------------------------
     /**
@@ -19,7 +20,7 @@ public class Library
      */
     public Library()
     {
-        lib = new HashMap<String, Import>();
+        lib = new ArrayList<Story>();
     }
 
     // ----------------------------------------------------------
@@ -30,7 +31,7 @@ public class Library
     public void importStory(String file)
     {
         Import temp = new Import(file);
-        lib.put(temp.getTitle(), temp);
+        //lib.add(temp.)
     }
 
     // ----------------------------------------------------------
@@ -45,9 +46,9 @@ public class Library
     // ----------------------------------------------------------
     /**
      * Place a description of your method here.
-     * @return
+     * @return An ArrayList of stories
      */
-    public HashMap<String, Import> getLibrary()
+    public ArrayList<Story> getLibrary()
     {
         return lib;
     }
@@ -55,11 +56,11 @@ public class Library
     // ----------------------------------------------------------
     /**
      * Place a description of your method here.
-     * @param title
+     * @param index Position of the story in the list
      */
-    public void removeStory(String title)
+    public void removeStory(int index)
     {
-        lib.remove(title);
+        lib.remove(index);
     }
 
 

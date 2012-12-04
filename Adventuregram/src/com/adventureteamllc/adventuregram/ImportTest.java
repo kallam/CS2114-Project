@@ -42,10 +42,10 @@ public class ImportTest extends junit.framework.TestCase
         assertEquals(imp.getAuthor(), "Some Person");
         assertEquals(imp.getDescription(), "This is the description.");
 
-        assertEquals(imp.getStoryChunks(), "[story NumberOfEvents = <3>][start]" +
-        		"[t] You are standing in a room[/t][c]*RUN* [1]*REPEAT* [start]" +
-        		"*FAIL* [end][/c][/start][1][t] You run.[/t][c]*RUN* [1]*FAIL* " +
-        		"[end]*TIMETRAVEL* [start][/c][/1][end][t] This is the end.[/t]" +
-        		"[/end][/story]");
+//        assertEquals(imp.getStoryChunks(), "[story NumberOfEvents = <3>][start]" +
+//        		"[t] You are standing in a room[/t][c]*RUN* [1]*REPEAT* [start]" +
+//        		"*FAIL* [end][/c][/start][1][t] You run.[/t][c]*RUN* [1]*FAIL* " +
+//        		"[end]*TIMETRAVEL* [start][/c][/1][end][t] This is the end.[/t]" +
+//        		"[/end][/story]");
     }
 }
