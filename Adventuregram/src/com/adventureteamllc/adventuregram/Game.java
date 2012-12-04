@@ -79,7 +79,7 @@ public class Game
             int offset = ch - '1';
             if (offset >= 0 && offset < count)
             {
-                playerPath.push(map.getEvent(playerPath.peek().getCommand(offset).getTarget()));
+                //playerPath.push(map.getEvent(playerPath.peek().getCommand(offset).getTarget()));
             }
 
             //System.out.println(":"+ s);
