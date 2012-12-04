@@ -7,7 +7,7 @@ package com.adventureteamllc.adventuregram;
  *  @author Chris
  *  @version Nov 25, 2012
  */
-public class ImportTest extends student.TestCase
+public class ImportTest extends junit.framework.TestCase
 {
     private Import imp;
     // ----------------------------------------------------------
