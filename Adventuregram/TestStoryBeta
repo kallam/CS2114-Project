@@ -3,7 +3,7 @@
 [Description]This is the description.
 
 [start]
-[Text]You are standing in a room
+[Text] You are standing in a room
 *RUN*[1] *REPEAT*[start] *FAIL*[end]
 
 [1]

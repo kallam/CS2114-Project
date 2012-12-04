@@ -29,7 +29,7 @@ public class ImportTest extends junit.framework.TestCase
      */
     public void setUp()
     {
-        imp = new Import("TestStory.txt");
+        imp = new Import("TestStoryBeta");
     }
 
     // ----------------------------------------------------------
@@ -41,11 +41,11 @@ public class ImportTest extends junit.framework.TestCase
         assertEquals(imp.getTitle(), "Test Story");
         assertEquals(imp.getAuthor(), "Some Person");
         assertEquals(imp.getDescription(), "This is the description.");
-
-//        assertEquals(imp.getStoryChunks(), "[story NumberOfEvents = <3>][start]" +
-//        		"[t] You are standing in a room[/t][c]*RUN* [1]*REPEAT* [start]" +
-//        		"*FAIL* [end][/c][/start][1][t] You run.[/t][c]*RUN* [1]*FAIL* " +
-//        		"[end]*TIMETRAVEL* [start][/c][/1][end][t] This is the end.[/t]" +
-//        		"[/end][/story]");
+        assertEquals(imp.getStoryChunks(), "[start]" +
+                "[Text] You are standing in a room*RUN*[1] *REPEAT*[start] " +
+                "*FAIL*[end][1][Text] You run.*RUN*[1] *FAIL*" +
+                "[end] *TIMETRAVEL*[start][end][Text] This is the end." +
+                "[/story]");
     }
+
 }
