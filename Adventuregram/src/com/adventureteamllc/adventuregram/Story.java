@@ -1,6 +1,7 @@
 package com.adventureteamllc.adventuregram;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+//import java.util.ArrayList;
 
 /**
  * // -------------------------------------------------------------------------
@@ -12,28 +13,63 @@ import java.util.ArrayList;
  */
 public class Story
 {
-    private ArrayList<Event> events;
+    //private ArrayList<Event> events;
+    private HashMap<String, Event> map;
     private String title;
 
-    public Story()
+    /**
+     *Initializes story
+     *@param title is Title of story
+     */
+    public Story(String title)
     {
-        events = new ArrayList<Event>();
+        //events = new ArrayList<Event>();
+        map = new HashMap<String, Event>();
+
 
     }
 
-    public void addEvent(Event ev)
+    /**
+     * sets the title,   may be unnecessary
+     * @param newTitle is the title of story
+     */
+    public void setTitle(String newTitle)
     {
-        events.add(ev);
+        title = newTitle;
+    }
+    /**
+     * Gets the String
+     * @return String title to return
+     */
+    public String getTitle()
+    {
+        return title;
+    }
+    /**
+     * Add an event to the map
+     * @param id String id of event
+     * @param event to place in map
+     */
+    public void addEvent(String id, Event event)
+    {
+        //events.add(ev);
+        map.put(id, event);
+
     }
 
-    public int getNumEvents()
-    {
-        return events.size();
-    }
+//    public int getNumEvents()
+  //  {
+       // return events.size();
+    //}
 
-    public Event getEvent(int i)
+    /**
+     * get an Event
+     * @param id of event to get
+     * @return Event to return from map
+     */
+    public Event getEvent(String id)
     {
-        return events.get(i);
+       return map.get(id);
     }
 
 

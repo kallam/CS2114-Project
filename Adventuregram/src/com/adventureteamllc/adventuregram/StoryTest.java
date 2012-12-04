@@ -18,12 +18,13 @@ extends TestCase
 private Story story;
 private Event event;
 
+
 /**
  * Initialize test fixtures
  */
 public void setUp()
 {
-   story = new Story();
+   story = new Story("theStory");
    event = new Event("title", "descrip");
 }
 
@@ -32,9 +33,11 @@ public void setUp()
  */
 public void testStory()
 {
-   story.addEvent(event);
-   assertEquals(event, story.getEvent(0));
-   assertEquals(1, story.getNumEvents());
+   story.addEvent("title", event);
+   assertEquals(event, story.getEvent("title"));
+   //assertEquals(1, story.getNumEvents());
+   story.setTitle("different");
+   assertEquals("different", story.getTitle());
 }
 
 
