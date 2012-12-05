@@ -1,14 +1,13 @@
 package com.adventureteamllc.adventuregram;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 // -------------------------------------------------------------------------
 /**
  *  Contains the stories so that they can be presented by the library screen
  *
  *  @author Alex
- *  @version Dec 3, 2012
+ *  @version Dec 1, 2012
  */
 public class Library
 {
@@ -33,6 +32,15 @@ public class Library
     {
         Import temp = new Import(file);
         lib.add(temp.getStory());
+    }
+
+ // ----------------------------------------------------------
+    /**
+     * Adds a story object to the library
+     * @param story object to Import
+     */
+    public void importStory(Story story) {
+        lib.add(story);
     }
 
     // ----------------------------------------------------------
@@ -67,6 +75,15 @@ public class Library
     public void removeStory(int index)
     {
         lib.remove(index);
+    }
+
+    // ----------------------------------------------------------
+    /**
+     * Returns the number of stories in the Library
+     * @return Number of stories in the story list
+     */
+    public int getSize() {
+        return lib.size();
     }
 
 
