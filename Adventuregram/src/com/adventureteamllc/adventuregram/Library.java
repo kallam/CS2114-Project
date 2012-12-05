@@ -25,27 +25,33 @@ public class Library
 
     // ----------------------------------------------------------
     /**
-     * Place a description of your method here.
-     * @param file
+     * Uses the Import class to create a story object and then save it in the
+     * library
+     * @param file Path of the file to be parsed
      */
     public void importStory(String file)
     {
         Import temp = new Import(file);
-        //lib.add(temp.)
+        lib.add(temp.getStory());
     }
 
     // ----------------------------------------------------------
     /**
-     * Place a description of your method here.
+     * Imports all the default stories in the assets folder
      */
     public void importStoriesFromAssets() {
-        //Find all text files in assets folder
-        //import each file individually
+        ArrayList<String> storyFiles = new ArrayList<String>();
+        //Add default stories here
+        storyFiles.add("TestStoryBeta.text");
+
+        for (String file : storyFiles) {
+            importStory(file);
+        }
     }
 
     // ----------------------------------------------------------
     /**
-     * Place a description of your method here.
+     * Returns a list of stories that have been parsed
      * @return An ArrayList of stories
      */
     public ArrayList<Story> getLibrary()
@@ -55,7 +61,7 @@ public class Library
 
     // ----------------------------------------------------------
     /**
-     * Place a description of your method here.
+     * Removes a story from the list
      * @param index Position of the story in the list
      */
     public void removeStory(int index)
