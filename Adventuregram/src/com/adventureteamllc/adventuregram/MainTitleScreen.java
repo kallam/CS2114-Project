@@ -4,9 +4,8 @@ import sofia.app.Screen;
 
 // -------------------------------------------------------------------------
 /**
- *  Write a one-sentence summary of your class here.
- *  Follow it with additional details about its purpose, what abstraction
- *  it represents, and how to use it.
+ *  This will be the first screen seen when opening the program.
+ *  Will display title, authors, and will move to a different screen on click.
  *
  *  @author ADVENTURETEAMLLC
  *  @version Nov 6, 2012
@@ -14,11 +13,12 @@ import sofia.app.Screen;
 public class MainTitleScreen extends Screen {
 
    /**
-     *
+     * Present the LibraryScreen to the user then end the MainTitleScreen.
      */
-    public void initialize()
+    public void onTouchDown()
     {
-        //TO DO:
+        presentScreen(LibraryScreen.class);
+        finish();
     }
 
 }
