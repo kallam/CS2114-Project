@@ -1,5 +1,9 @@
 package com.adventureteamllc.adventuregram;
 
+import java.io.IOException;
+import android.content.Context;
+import android.content.res.AssetManager;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 // -------------------------------------------------------------------------
@@ -47,14 +51,29 @@ public class Library
     /**
      * Imports all the default stories in the assets folder
      */
-    public void importStoriesFromAssets() {
-        ArrayList<String> storyFiles = new ArrayList<String>();
+    public void importStoriesFromAssets(Context myContext) {
         //Add default stories here
-        storyFiles.add("TestStoryBeta.text");
-
-        for (String file : storyFiles) {
-            importStory(file);
+        AssetManager assets = myContext.getAssets();
+        String[] storyFiles;
+        try
+        {
+            storyFiles = assets.list("Stories/");
         }
+        catch (IOException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+//        for (String file : storyFiles) {
+//            Scanner textFile = getAssets().open(file);
+//
+//
+//
+//
+//            importStory(file);
+//        }
     }
 
     // ----------------------------------------------------------
