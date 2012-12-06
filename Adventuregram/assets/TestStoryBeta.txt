@@ -3,13 +3,17 @@
 [Description]This is the description.
 
 [start]
-[Text] You are standing in a room
-*RUN*[1] *REPEAT*[start] *FAIL*[end]
+[Text]You are standing in a room
+*RUN*[1] *REPEAT*[start] *FAIL*[end] *NOTHING*[2]
 
 [1]
-[Text] You run.
-*RUN*[1] *FAIL*[end] *TIMETRAVEL*[start]
+[Text]You run.
+*RUN*[1] *FAIL*[end] *TIMETRAVEL*[start] **[]
+
+[2]
+[Text]Start over.
+*START*[start] *FAIL*[end] *TIMETRAVEL*[1] *THIS*[2]
 
 [end]
-[Text] This is the end.
+[Text]This is the end.
 [/story]

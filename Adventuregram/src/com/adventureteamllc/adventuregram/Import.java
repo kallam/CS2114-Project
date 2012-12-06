@@ -24,49 +24,59 @@ public class Import
     // ----------------------------------------------------------
     /**
      * Create a new Import object.
+     * @param filename
+     */
+    public Import(String filename)
+    {
+        this(new File(filename));
+    }
+
+    // ----------------------------------------------------------
+    /**
+     * Create a new Import object.
      * @param file
      */
-    public Import(String file)
+    public Import(File file)
     {
-      storyOfEvents = null;
-      title = "";
-      description = "";
-      author = "";
-      story = "";
-      try
-      {
-          Scanner in = new Scanner(new File(file));
-          in.useDelimiter("\\]");
-          in.next();
-          in.useDelimiter("\\[");
-          title = in.next();
-          title = title.substring(1, title.length() - 2);
+        storyOfEvents = null;
+        title = "";
+        description = "";
+        author = "";
+        story = "";
+        try
+        {
+            Scanner in = new Scanner(file);
+            in.useDelimiter("\\]");
+            in.next();
+            in.useDelimiter("\\[");
+            title = in.next();
+            title = title.substring(1, title.length() - 2);
 
-          in.useDelimiter("\\]");
-          in.next();
-          in.useDelimiter("\\[");
-          author = in.next();
-          author = author.substring(1, author.length() - 2);
+            in.useDelimiter("\\]");
+            in.next();
+            in.useDelimiter("\\[");
+            author = in.next();
+            author = author.substring(1, author.length() - 2);
 
-          in.useDelimiter("\\]");
-          in.next();
-          in.useDelimiter("\\[");
-          description = in.next();
-          description = description.substring(1, description.length() - 4);
+            in.useDelimiter("\\]");
+            in.next();
+            in.useDelimiter("\\[");
+            description = in.next();
+            description = description.substring(1, description.length() - 4);
 
 
-          while (in.hasNextLine())
-          {
-              story = story + in.nextLine();
-          }
+            while (in.hasNextLine())
+            {
+                story = story + in.nextLine();
+            }
 
-          in.close();
-      }
-      catch (FileNotFoundException e)
-      {
-          System.out.println("File not found");
+            in.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found");
 
-      }
+        }
 
     }
 
@@ -106,8 +116,80 @@ public class Import
 
     private void constructStory()
     {
-        //TODO:
+        storyOfEvents = new Story(title);
+        buildEvents(story);
     }
+
+    private void buildEvents(String input)
+    {
+        if (input.length() > 0)
+        {
+            Scanner in = new Scanner(input);
+
+            in.useDelimiter("\\]");
+            String ref = in.next();
+            ref = ref.substring(1, ref.length());
+
+//            System.out.println(ref);
+
+            if (!ref.equals("end"))
+            {
+                in.next();
+                in.useDelimiter("\\*");
+                String text = in.next();
+                text = text.substring(1, text.length());
+
+//                System.out.println(text);
+
+                Event event = new Event(ref, text);
+
+                //Command 1
+                String comm = in.next().trim();
+//                System.out.println(comm);
+
+                in.useDelimiter("\\]");
+                String commref = in.next();
+                commref = commref.substring(2, commref.length()).trim();
+//                System.out.println(commref);
+
+                if(!comm.equals("") && !commref.equals(""))
+                {
+                    event.addCommand(new Command(comm, commref));
+                }
+
+                //Command 2
+                for (int i = 0; i < 3; i++)
+                {
+                    in.useDelimiter("\\*");
+                    in.next();
+                    comm = in.next().trim();
+//                    System.out.println(comm);
+
+                    in.useDelimiter("\\]");
+                    commref = in.next();
+                    commref = commref.substring(2, commref.length()).trim();
+//                    System.out.println(commref);
+                    if(!comm.equals("") && !commref.equals(""))
+                    {
+                        event.addCommand(new Command(comm, commref));
+                    }
+                }
+                storyOfEvents.addEvent(event.getTitle(), event);
+                String rest = in.nextLine();
+                in.close();
+                buildEvents(rest);
+            }
+            else
+            {
+                String text = in.nextLine();
+                text = text.substring(7, text.length() - 8);
+//                System.out.println(text);
+                Event event = new Event(ref, text);
+                storyOfEvents.addEvent(event.getTitle(), event);
+            }
+        }
+    }
+
 
 }
 //Old Import Constructor

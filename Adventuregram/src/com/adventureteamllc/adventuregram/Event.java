@@ -41,6 +41,7 @@ public class Event
 
     private String title;
     private String description;
+    private int connections;
 
     // private String imageLink;
 
@@ -61,6 +62,7 @@ public class Event
         // start = false;
       //  end = false;
         commands = new Command[4];
+        connections = 0;
 
     }
     /**
@@ -85,7 +87,7 @@ public class Event
      */
     public int getNumConnections()
     {
-        return commands.length;
+        return connections;
     }
 
     // ----------------------------------------------------------
@@ -116,8 +118,9 @@ public class Event
      */
     public void addCommand(Command com)
     {
-        if (commands.length < 4) {
-            commands[commands.length] = com;
+        if (connections < 4) {
+            commands[connections] = com;
+            connections++;
         }
     }
 
