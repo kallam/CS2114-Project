@@ -42,7 +42,7 @@ public class LibraryScreen extends ListActivity {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        lib.importStoriesFromAssets();
+        lib.importStoriesFromAssets(null);
         titles = new ArrayList<String>();
         // Create array list of all titles from stories imported from assets
         for(Story n : lib.getLibrary())
