@@ -1,7 +1,6 @@
 package com.adventureteamllc.adventuregram;
 
 import java.util.HashMap;
-//import java.util.ArrayList;
 
 /**
  * // -------------------------------------------------------------------------
@@ -13,9 +12,10 @@ import java.util.HashMap;
  */
 public class Story
 {
-    //private ArrayList<Event> events;
     private HashMap<String, Event> map;
     private String title;
+    private String author;
+    private String description;
 
     /**
      *Initializes story
@@ -23,10 +23,8 @@ public class Story
      */
     public Story(String title)
     {
-        //events = new ArrayList<Event>();
         map = new HashMap<String, Event>();
-
-
+        this.title = title;
     }
 
     /**
@@ -57,10 +55,46 @@ public class Story
 
     }
 
+    // ----------------------------------------------------------
+    /**
+     * Sets the author of the story
+     * @param author Name of the story's author
+     */
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    // ----------------------------------------------------------
+    /**
+     * Sets the description of the story
+     * @param description of the story
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    // ----------------------------------------------------------
+    /**
+     * Gets the author's name
+     * @return Author's name
+     */
+    public String getAuthor() {
+        return author;
+    }
+
+    // ----------------------------------------------------------
+    /**
+     * Gets the description of the story
+     * @return Description of the story
+     */
+    public String getDescription() {
+        return description;
+    }
+
 //    public int getNumEvents()
-  //  {
-       // return events.size();
-    //}
+//      {
+//     return map.size();
+//    }
 
     /**
      * get an Event
@@ -69,7 +103,7 @@ public class Story
      */
     public Event getEvent(String id)
     {
-       return map.get(id);
+        return map.get(id);
     }
 
 
