@@ -65,6 +65,26 @@ public class ImportTest extends junit.framework.TestCase
         assertEquals(story.getEvent("1").getNumConnections(), 3);
         assertEquals(story.getEvent("2").getNumConnections(), 4);
         assertEquals(story.getEvent("end").getNumConnections(), 0);
+
+        assertEquals(story.getEvent("start").getCommand(0).getName(), "RUN");
+        assertEquals(story.getEvent("start").getCommand(1).getName(), "REPEAT");
+        assertEquals(story.getEvent("start").getCommand(2).getName(), "FAIL");
+        assertEquals(story.getEvent("start").getCommand(3).getName(), "NOTHING");
+
+        assertEquals(story.getEvent("start").getCommand(0).getTarget(), "1");
+        assertEquals(story.getEvent("start").getCommand(1).getTarget(), "start");
+        assertEquals(story.getEvent("start").getCommand(2).getTarget(), "end");
+        assertEquals(story.getEvent("start").getCommand(3).getTarget(), "2");
+
+        assertEquals(story.getEvent("1").getCommand(0).getName(), "RUN");
+        assertEquals(story.getEvent("1").getCommand(1).getName(), "FAIL");
+        assertEquals(story.getEvent("1").getCommand(2).getName(), "TIMETRAVEL");
+        assertNull(story.getEvent("1").getCommand(4));
+
+        assertNull(story.getEvent("end").getCommand(0));
+        assertNull(story.getEvent("end").getCommand(1));
+        assertNull(story.getEvent("end").getCommand(2));
+        assertNull(story.getEvent("end").getCommand(3));
     }
 
 }
