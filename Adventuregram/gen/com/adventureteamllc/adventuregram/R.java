@@ -15,10 +15,15 @@ public final class R {
         public static int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static int menu_settings=0x7f070000;
+        public static int library=0x7f070000;
+        public static int menu_settings=0x7f070004;
+        public static int textView1=0x7f070002;
+        public static int textView2=0x7f070001;
+        public static int textView3=0x7f070003;
     }
     public static final class layout {
-        public static int maintitlescreen=0x7f030000;
+        public static int libraryscreen=0x7f030000;
+        public static int maintitlescreen=0x7f030001;
     }
     public static final class menu {
         public static int maintitlescreen=0x7f060000;

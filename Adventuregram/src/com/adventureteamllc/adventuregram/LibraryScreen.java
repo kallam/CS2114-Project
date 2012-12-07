@@ -1,5 +1,7 @@
 package com.adventureteamllc.adventuregram;
 
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
 import android.view.View;
 import android.widget.ListView;
 import java.util.ArrayList;
@@ -15,7 +17,7 @@ import android.app.ListActivity;
  *  This screen will display the titles of each story that have been imported.
  *  Clicking on any of the titles should then begin playing that story.
  *
- *  @author Uncle Jemima
+ *  @author Uncle Jemima and Alex
  *  @version Dec 3, 2012
  */
 public class LibraryScreen extends ListActivity {
@@ -38,28 +40,34 @@ public class LibraryScreen extends ListActivity {
     private Library lib;
     private ArrayList<String> titles;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState)
+    // ----------------------------------------------------------
+    /**
+     * Called to initialize the shapes on the screen. This version of the
+     * initialize method takes a String, so it
+     */
+    public void initialize()
     {
-        super.onCreate(savedInstanceState);
+        ListView listView = (ListView) findViewById(R.id.library);
         lib.importStoriesFromAssets(getApplicationContext());
         titles = new ArrayList<String>();
+
         // Create array list of all titles from stories imported from assets
         for(Story n : lib.getLibrary())
         {
             titles.add(n.getTitle());
         }
-        // Tells the listView to use titles as its reference String ArrayList
-        setListAdapter(new ArrayAdapter<String>(this,
-            android.R.layout.simple_list_item_1, titles));
-    }
 
-    public void onListItemClick(ListView parent, View v, int position, long id)
-    {
-        // Index position of the title in titles will correspond with the
-        // index position of the correct story in lib.getLibrary().
-        //
-        // Play the story: lib.getLibrary().get(position);
-        // Move to play screen
+        // Tells the listView to use titles as its reference String ArrayList
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            android.R.layout.simple_list_item_1, android.R.id.text1, titles);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Start story
+                System.out.println("yay");
+            }
+        });
+
     }
 }
