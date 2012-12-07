@@ -1,5 +1,6 @@
 package com.adventureteamllc.adventuregram;
 
+import sofia.app.Screen;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -11,7 +12,7 @@ import android.widget.Button;
  *  @author Brian Wright
  *  @version Dec 6, 2012
  */
-public class PlayScreen
+public class PlayScreen extends Screen
 {
     private Button choice1;
     private Button choice2;
@@ -24,7 +25,7 @@ public class PlayScreen
     private TextView storyTitle;
     private TextView eventDescription;
 
-    public void Initialize()
+    public void initialize(Story story)
     {
         //set storyTitle text and eventDescrip from text file
         //initialize buttons and their text

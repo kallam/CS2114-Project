@@ -1,16 +1,13 @@
 package com.adventureteamllc.adventuregram;
 
 import java.util.ArrayList;
-
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import sofia.graphics.TextShape;
-
 import sofia.app.Screen;
 import sofia.graphics.Color;
 import sofia.widget.ListView;
@@ -61,26 +58,29 @@ public class LibraryScreen extends Screen {
 		lib.importStory(story);
 
 		titles = new String[lib.size()];
-		
+
 		for(int i = 0; i < lib.size(); i++)
 		{
 			titles[i] = lib.getStory(i).getTitle();
 		}	
-		   
+
 		library = new ListView<String>(this);
-		
+
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, titles);
 		library.setAdapter(adapter);
-		
+
 		library.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
-				    int position, long id) {
-				    Toast.makeText(getApplicationContext(),
-				      "" + position, Toast.LENGTH_LONG)
-				      .show();
-				  }
-			});
-		
+					int position, long id) {
+				
+			}
+		});
+
 		setContentView(library);
+	}
+	
+	public void startStory(int position) {
+		presentScreen(PlayScreen.class, lib.getStory(position));
+		finish();
 	}
 }

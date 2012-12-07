@@ -6,8 +6,9 @@ int id choice2 0x7f070008
 int id choice3 0x7f070009
 int id choice4 0x7f070004
 int id eventDescription 0x7f070007
+int id exitLibrary 0x7f07000a
 int id library 0x7f070000
-int id menu_settings 0x7f07000a
+int id menu_settings 0x7f07000b
 int id storyTitle 0x7f070006
 int id textView1 0x7f070002
 int id textView2 0x7f070001
