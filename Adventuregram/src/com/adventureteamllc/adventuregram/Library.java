@@ -95,8 +95,17 @@ public class Library
      * Returns the number of stories in the Library
      * @return Number of stories in the story list
      */
-    public int getSize() {
+    public int size() {
         return lib.size();
+    }
+    
+    /**
+     * Returns a story from the library
+     * @param index of the story in the library
+     * @return Story from the library
+     */
+    public Story getStory(int index) {
+    	return lib.get(index);
     }
 
 

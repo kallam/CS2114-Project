@@ -28,7 +28,7 @@ public class LibraryTest extends student.TestCase
         Story quest = new Story("A New Hope");
         library.importStory(quest);
         library.removeStory(1);
-        assertEquals(1, library.getSize());
+        assertEquals(1, library.size());
     }
 
     // ----------------------------------------------------------
