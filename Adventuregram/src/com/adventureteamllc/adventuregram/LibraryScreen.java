@@ -2,6 +2,10 @@ package com.adventureteamllc.adventuregram;
 
 import java.util.ArrayList;
 
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -10,6 +14,7 @@ import sofia.graphics.TextShape;
 import sofia.app.Screen;
 import sofia.graphics.Color;
 import sofia.widget.ListView;
+import sofia.view.*;
 
 // -------------------------------------------------------------------------
 /**
@@ -37,7 +42,7 @@ public class LibraryScreen extends Screen {
 
 	//    Stopped using sofia and got a little further.
 	private Library lib;
-	private ArrayList<String> titles;
+	private String[] titles;
 	private ListView<String> library;
 
 	// ----------------------------------------------------------
@@ -51,22 +56,31 @@ public class LibraryScreen extends Screen {
 		Story story = new Story("hey");
 		lib.importStory(story);
 		story = new Story ("ya");
+		lib.importStory(story);
+		story = new Story ("jurassic");
+		lib.importStory(story);
 
-		   
-		library = new ListView<String>(this);
-		library.setOnItemClickListener(null);
+		titles = new String[lib.size()];
 		
-		ArrayList<Story> stories = lib.getLibrary();
 		for(int i = 0; i < lib.size(); i++)
 		{
-			library.add(stories.get(i).getTitle());
-		}		
+			titles[i] = lib.getStory(i).getTitle();
+		}	
+		   
+		library = new ListView<String>(this);
 		
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, titles);
+		library.setAdapter(adapter);
+		
+		library.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,
+				    int position, long id) {
+				    Toast.makeText(getApplicationContext(),
+				      "" + position, Toast.LENGTH_LONG)
+				      .show();
+				  }
+			});
 		
 		setContentView(library);
-	}
-	
-	public void OnItemClick() {
-		Toast.makeText(this, "hey", 100);
 	}
 }
