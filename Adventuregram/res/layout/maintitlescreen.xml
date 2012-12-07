@@ -22,15 +22,15 @@
         android:layout_marginTop="36dp"
         android:text="SUPERAWESOMEADVENTURE"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView3"
+
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="140dp"
-        android:text="Click to continue..."
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:text="PLACE FIST HERE" />
 
 </RelativeLayout>

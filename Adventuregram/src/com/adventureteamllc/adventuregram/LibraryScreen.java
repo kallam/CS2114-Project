@@ -31,6 +31,8 @@ public class LibraryScreen extends ListActivity {
 //    }
 //
 //    Then need a way to see which item is clicked so that story can be loaded.
+//
+//
 
 
 //    Stopped using sofia and got a little further.
@@ -39,13 +41,15 @@ public class LibraryScreen extends ListActivity {
 
     // ----------------------------------------------------------
     /**
-     * Initializes the Library view
+     * Called to initialize the shapes on the screen. This version of the
+     * initialize method takes a String, so it
      */
     public void initialize()
     {
         ListView listView = (ListView) findViewById(R.id.library);
         lib.importStoriesFromAssets(getApplicationContext());
         titles = new ArrayList<String>();
+
 
         // Create array list of all titles from stories imported from assets
         for(Story n : lib.getLibrary())
@@ -59,7 +63,8 @@ public class LibraryScreen extends ListActivity {
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view,
+                int position, long id) {
                 //Start story
                 System.out.println("yay");
             }

@@ -15,7 +15,7 @@ public class MainTitleScreen extends Screen {
    /**
      * Present the LibraryScreen to the user then end the MainTitleScreen.
      */
-    public void onTouchDown()
+    public void button1Clicked()
     {
         presentScreen(LibraryScreen.class);
         finish();
