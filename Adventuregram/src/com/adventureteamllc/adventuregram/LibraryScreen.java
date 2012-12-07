@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ListView;
 import java.util.ArrayList;
 import android.widget.ArrayAdapter;
-import android.os.Bundle;
 import android.app.ListActivity;
 
 //import sofia.widget.ListView;
@@ -32,8 +31,6 @@ public class LibraryScreen extends ListActivity {
 //    }
 //
 //    Then need a way to see which item is clicked so that story can be loaded.
-//
-//
 
 
 //    Stopped using sofia and got a little further.
@@ -42,8 +39,7 @@ public class LibraryScreen extends ListActivity {
 
     // ----------------------------------------------------------
     /**
-     * Called to initialize the shapes on the screen. This version of the
-     * initialize method takes a String, so it
+     * Initializes the Library view
      */
     public void initialize()
     {
