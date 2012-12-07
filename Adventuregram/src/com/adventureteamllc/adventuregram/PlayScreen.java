@@ -1,5 +1,6 @@
 package com.adventureteamllc.adventuregram;
 
+import android.widget.TextView;
 import android.widget.Button;
 
 /**
@@ -17,4 +18,6 @@ public class PlayScreen
     private Button choice3;
     private Button choice4;
 
+    private TextView storyTitle;
+    private TextView eventDescription;
 }
