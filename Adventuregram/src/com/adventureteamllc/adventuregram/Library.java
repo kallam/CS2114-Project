@@ -7,14 +7,15 @@ import java.util.ArrayList;
 
 // -------------------------------------------------------------------------
 /**
- *  Contains the stories so that they can be presented by the library screen
+ *  Contains the Import objects that hold the stories so that
+ *  they can be presented by the library screen
  *
  *  @author Alex
  *  @version Dec 1, 2012
  */
 public class Library
 {
-    private ArrayList<Story> lib;
+    private ArrayList<Import> library;
 
     // ----------------------------------------------------------
     /**
@@ -22,7 +23,7 @@ public class Library
      */
     public Library()
     {
-        lib = new ArrayList<Story>();
+        library = new ArrayList<Import>();
     }
 
     // ----------------------------------------------------------
@@ -33,18 +34,10 @@ public class Library
      */
     public void importStory(String file)
     {
-        Import temp = new Import(file);
-        lib.add(temp.getStory());
+        Import story = new Import(file);
+        library.add(story);
     }
 
- // ----------------------------------------------------------
-    /**
-     * Adds a story object to the library
-     * @param story object to Import
-     */
-    public void importStory(Story story) {
-        lib.add(story);
-    }
 
     // ----------------------------------------------------------
     /**
@@ -64,10 +57,10 @@ public class Library
             e.printStackTrace();
         }
 
-
         for (int i = 0; i < storyFiles.length; i++) {
             importStory(storyFiles[i]);
         }
+
     }
 
     // ----------------------------------------------------------
@@ -75,9 +68,9 @@ public class Library
      * Returns a list of stories that have been parsed
      * @return An ArrayList of stories
      */
-    public ArrayList<Story> getLibrary()
+    public ArrayList<Import> getLibrary()
     {
-        return lib;
+        return library;
     }
 
     // ----------------------------------------------------------
@@ -87,25 +80,25 @@ public class Library
      */
     public void removeStory(int index)
     {
-        lib.remove(index);
+        library.remove(index);
     }
 
     // ----------------------------------------------------------
     /**
-     * Returns the number of stories in the Library
-     * @return Number of stories in the story list
+     * Returns the number of Import in the Library
+     * @return Number of stories in the Import list
      */
     public int size() {
-        return lib.size();
+        return library.size();
     }
-    
+
     /**
-     * Returns a story from the library
-     * @param index of the story in the library
+     * Returns an Import from the library
+     * @param index of the import object in the library
      * @return Story from the library
      */
-    public Story getStory(int index) {
-    	return lib.get(index);
+    public Import getStory(int index) {
+    	return library.get(index);
     }
 
 
