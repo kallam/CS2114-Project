@@ -1,5 +1,7 @@
 package com.adventureteamllc.adventuregram;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.widget.Toast;
 import sofia.app.Screen;
 import android.widget.TextView;
@@ -72,7 +74,29 @@ public class PlayScreen extends Screen {
      */
     public void choice1Clicked()
     {
-        String nextEvent = currentEvent.getCommand(0).getTarget();
+        changeEvent(0);
+
+    }
+    public void choice2Clicked()
+    {
+        changeEvent(1);
+
+    }
+    public void choice3Clicked()
+    {
+        changeEvent(2);
+
+    }
+    public void choice4Clicked()
+    {
+        changeEvent(3);
+    }
+    /**
+     * Change Event on screen
+     */
+    public void changeEvent(int numEvent)
+    {
+        String nextEvent = currentEvent.getCommand(numEvent).getTarget();
         //test if last event in story
         if (!nextEvent.equals("end"))
         {
@@ -99,25 +123,13 @@ public class PlayScreen extends Screen {
         }
         else
         {
-            //currentEvent = adventure.getEvent("end");
-            //eventDescription.setText(currentEvent.getDescription());
-            //String author = adventure.getAuthor();
+            currentEvent = adventure.getEvent("end");
+            eventDescription.setText(currentEvent.getDescription());
+
             Toast.makeText(this, "Thanks for playing "+ adventure.getAuthor()
-                +"'s game!", Toast.LENGTH_LONG).show();
+                +"'s game! Now go play another.", Toast.LENGTH_LONG).show();
             finish();
         }
-
-    }
-    public void choice2Clicked()
-    {
-
-    }
-    public void choice3Clicked()
-    {
-
-    }
-    public void choice4Clicked()
-    {
 
     }
     /**
@@ -125,6 +137,26 @@ public class PlayScreen extends Screen {
      */
     public void exitLibraryClicked()
     {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                case DialogInterface.BUTTON_POSITIVE:
+                    //Yes button clicked
+                    finish();
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    //No button clicked
+                    break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+            .setNegativeButton("No", dialogClickListener).show();
+
 
     }
 
