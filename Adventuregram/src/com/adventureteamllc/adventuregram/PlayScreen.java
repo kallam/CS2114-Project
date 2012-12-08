@@ -195,5 +195,9 @@ public class PlayScreen extends Screen {
 
 
     }
+    public Event getCurrentEvent()
+    {
+        return currentEvent;
+    }
 
 }

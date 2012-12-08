@@ -26,6 +26,8 @@ public class PlayScreenTest
     private TextView storyTitle;
     private TextView eventDescription;
 
+    private PlayScreen play;
+
     //private Event currentEvent;
     //private Story adventure;
     /**
@@ -43,15 +45,15 @@ public class PlayScreenTest
      */
     public void setUp()
     {
-
+        //play.initialize(story);
     }
     /**
-     *
+     * Test that choice buttons travel to events
      */
     public void testChoices()
     {
         click(choice1);
-       // assertNotSame("start" ,getScreen().getCurrentEvent().getTitle());
+        assertNotSame("start" ,getScreen().getCurrentEvent().getTitle());
     }
 
 }
