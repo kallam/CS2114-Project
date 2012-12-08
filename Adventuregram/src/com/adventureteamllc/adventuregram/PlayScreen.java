@@ -52,7 +52,7 @@ public class PlayScreen extends Screen {
             eventDescription.setText(currentEvent.getDescription());
             for (int i = 0; i < 4; i++)
             {
-                if (!currentEvent.getCommand(i).getName().equals(""))
+                if (currentEvent.getCommand(i) != null  && !currentEvent.getCommand(i).getName().equals(""))
                 {
                     choices[i].setClickable(true);
                     choices[i].setText(currentEvent.getCommand(i).getName());
@@ -110,7 +110,7 @@ public class PlayScreen extends Screen {
             choices[3] = choice4;
             for (int i = 0; i < 4; i++)
             {
-                if (!currentEvent.getCommand(i).getName().equals(""))
+                if (currentEvent.getCommand(i) != null && !currentEvent.getCommand(i).getName().equals("") )
                 {
                     choices[i].setClickable(true);
                     choices[i].setText(currentEvent.getCommand(i).getName());
