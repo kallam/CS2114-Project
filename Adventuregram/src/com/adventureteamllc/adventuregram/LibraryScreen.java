@@ -61,7 +61,6 @@ public class LibraryScreen extends Screen {
             public void onItemClick(AdapterView<?> parent, View view,
                 int position, long id) {
                 presentScreen(PlayScreen.class, lib.getStory(position));
-                finish();
             }
         });
 
