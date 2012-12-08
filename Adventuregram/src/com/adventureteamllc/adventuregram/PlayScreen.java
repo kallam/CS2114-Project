@@ -60,6 +60,7 @@ public class PlayScreen extends Screen {
                 }
                 else
                 {
+                    choices[i].setText("");
                     choices[i].setClickable(false);
                 }
             }
@@ -78,6 +79,7 @@ public class PlayScreen extends Screen {
         changeEvent(0);
 
     }
+
     public void choice2Clicked()
     {
         changeEvent(1);
@@ -118,6 +120,7 @@ public class PlayScreen extends Screen {
                 }
                 else
                 {
+                    choices[i].setText("");
                     choices[i].setClickable(false);
                 }
             }
@@ -129,7 +132,15 @@ public class PlayScreen extends Screen {
 
             Toast.makeText(this, "Thanks for playing "+ adventure.getAuthor()
                 +"'s game! Now go play another.", Toast.LENGTH_LONG).show();
-            finish();
+            choices[0].setText("Thank you");
+            choices[1].setText("for");
+            choices[2].setText("playing");
+            choices[3].setText("this adventure!");
+            for (int i = 0; i < 4; i++)
+            {
+                choices[i].setClickable(false);
+            }
+            //finish();
         }
 
     }
