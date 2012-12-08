@@ -7,7 +7,10 @@ import java.util.ArrayList;
  *  Contains the Import objects that hold the stories so that
  *  they can be presented by the library screen
  *
- *  @author Alex
+ *  @author Brian Wright
+ *  @author Alex Kallam
+ *  @author Chris Hoffman
+ *  @author Jake Sperlazza
  *  @version Dec 1, 2012
  */
 public class Library

@@ -18,7 +18,10 @@ import sofia.widget.ListView;
  *  This screen will display the titles of each story that have been imported.
  *  Clicking on any of the titles should then begin playing that story.
  *
- *  @author Uncle Jemima and Alex
+ *  @author Brian Wright
+ *  @author Alex Kallam
+ *  @author Chris Hoffman
+ *  @author Jake Sperlazza
  *  @version Dec 3, 2012
  */
 public class LibraryScreen extends Screen {
@@ -81,4 +84,14 @@ public class LibraryScreen extends Screen {
 
         setContentView(libraryView);
     }
+
+    // ----------------------------------------------------------
+    /**
+     * Gets the Library that holds the list of stories
+     * @return libraryList of stories
+     */
+    public Library getLibraryList() {
+        return libraryList;
+    }
+
 }
