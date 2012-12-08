@@ -59,7 +59,7 @@ public class LibraryScreen extends Screen {
         for(int i = 0; i < libraryList.size(); i++)
         {
             Map<String, String> storyInfo = new HashMap<String, String>();
-            storyInfo.put("Title", (libraryList.getStory(i).getTitle()) + " - " +
+            storyInfo.put("Title", ("'" + libraryList.getStory(i).getTitle()) + "' by " +
                 libraryList.getStory(i).getAuthor());
             storyInfo.put("Description", libraryList.getStory(i).getDescription());
             storyList.add(storyInfo);
