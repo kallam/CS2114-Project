@@ -3,7 +3,6 @@ package com.adventureteamllc.adventuregram;
 import android.graphics.RectF;
 import sofia.graphics.ImageShape;
 import sofia.app.ShapeScreen;
-import sofia.app.Screen;
 
 // -------------------------------------------------------------------------
 /**

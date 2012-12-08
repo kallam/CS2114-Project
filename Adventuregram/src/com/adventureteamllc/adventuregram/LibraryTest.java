@@ -1,5 +1,7 @@
 package com.adventureteamllc.adventuregram;
 
+import junit.framework.TestCase;
+
 // -------------------------------------------------------------------------
 /**
  *  Write a one-sentence summary of your class here.
@@ -9,7 +11,7 @@ package com.adventureteamllc.adventuregram;
  *  @author Alex
  *  @version Dec 4, 2012
  */
-public class LibraryTest extends student.TestCase
+public class LibraryTest extends TestCase
 {
 
     private Library library;

@@ -2,11 +2,15 @@ package com.adventureteamllc.adventuregram;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import android.content.res.AssetManager;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
+import android.widget.SimpleAdapter;
 import sofia.app.Screen;
 import sofia.widget.ListView;
 
@@ -31,6 +35,8 @@ public class LibraryScreen extends Screen {
     public void initialize()
     {
         lib = new Library();
+        
+        ArrayList<Map<String, String>> storyList = new ArrayList<Map<String, String>>();
 
         AssetManager assets = this.getAssets();
         try
@@ -53,13 +59,22 @@ public class LibraryScreen extends Screen {
 
         for(int i = 0; i < lib.size(); i++)
         {
-            titles[i] = lib.getStory(i).getTitle();
+            Map<String, String> storyInfo = new HashMap<String, String>();
+            storyInfo.put("Title", lib.getStory(i).getTitle());
+            storyInfo.put("Description", lib.getStory(i).getDescription());
+            storyList.add(storyInfo);
         }
 
         library = new ListView<String>(this);
+        
+        SimpleAdapter adapter = new SimpleAdapter(this, storyList,
+                android.R.layout.simple_list_item_2,
+                new String[] {"Title", "Description"},
+                new int[] {android.R.id.text1,
+                           android.R.id.text2});
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-            android.R.layout.simple_list_item_1, titles);
+//        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,
+//            android.R.layout.simple_list_item_1, titles);
         library.setAdapter(adapter);
 
         library.setOnItemClickListener(new OnItemClickListener() {
