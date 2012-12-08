@@ -38,6 +38,11 @@ public class Library
         library.add(story);
     }
 
+    // ----------------------------------------------------------
+    /**
+     * Adds an import object to the library
+     * @param importedStory Import object to be added
+     */
     public void importStory(Import importedStory)
     {
         library.add(importedStory);
@@ -98,12 +103,12 @@ public class Library
     }
 
     /**
-     * Returns an Import from the library
-     * @param index of the import object in the library
+     * Returns an Story from the library
+     * @param index of the import object in the library that contains the story
      * @return Story from the library
      */
-    public Import getStory(int index) {
-    	return library.get(index);
+    public Story getStory(int index) {
+        return library.get(index).getStory();
     }
 
 
