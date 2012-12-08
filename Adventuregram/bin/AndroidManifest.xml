@@ -25,6 +25,7 @@
         </activity>
         
         <activity android:name=".LibraryScreen" />
+        <activity android:name=".PlayScreen" />
     </application>
 
 </manifest>

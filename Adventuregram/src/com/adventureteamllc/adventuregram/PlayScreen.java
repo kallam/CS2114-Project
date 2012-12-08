@@ -13,11 +13,13 @@ import android.widget.Button;
  *  @version Dec 6, 2012
  */
 public class PlayScreen extends Screen {
-	
+
     private Button choice1;
     private Button choice2;
     private Button choice3;
     private Button choice4;
+
+    private Button[] choices;
 
     //opens are you sure? progress won't be saved?
     private Button exitLibrary;
@@ -25,12 +27,32 @@ public class PlayScreen extends Screen {
     private TextView storyTitle;
     private TextView eventDescription;
 
+    private Event currentEvent;
+
     public void initialize(Story story)
     {
-        //set storyTitle text and eventDescrip from text file
-        //initialize buttons and their text
-        //if buttons have no reference then hide or disable them
-    	//storyTitle.setText(story.getTitle());
+        if (story != null)
+        {
+            choices = new Button[4];
+            choices[0] = choice1;
+            choices[1] = choice2;
+            choices[2] = choice3;
+            choices[3] = choice4;
+            currentEvent = story.getEvent("start");
+            storyTitle.setText(story.getTitle());
+            eventDescription.setText(currentEvent.getDescription());
+            for (int i = 0; i < 4; i++)
+            {
+                if (!currentEvent.getCommand(i).getName().equals(""))
+                {
+                    choices[i].setText(currentEvent.getCommand(i).getName());
+                }
+                else
+                {
+                    choices[i].setClickable(false);
+                }
+            }
+        }
 
     }
 
@@ -42,15 +64,15 @@ public class PlayScreen extends Screen {
      */
     public void choice1Clicked()
     {
-    	
+
     }
     public void choice2Clicked()
     {
-    	
+
     }
     public void choice3Clicked()
     {
- 
+
     }
     public void choice4Clicked()
     {
