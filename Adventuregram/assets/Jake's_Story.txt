@@ -102,7 +102,7 @@
 [dialog3.1]
 [Text]The dragon pleads, "Oh pleasee. I really wanna burn down some evil people
  today!" 
-*ALRIGHT FIRE! YEAH SURE, LET'S DO IT*[] **[] **[] **[]
+*ALRIGHT FIRE! YEAH SURE, LET'S DO IT*[revenge] **[] **[] **[]
 
 [revenge]
 [Text]You hop on the dragon. He shows you how to mount him while avoid his scary
