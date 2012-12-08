@@ -32,7 +32,7 @@ public class MainTitleScreen extends ShapeScreen {
      */
     public void button1Clicked()
     {
-//        presentScreen(LibraryScreen.class);
+        presentScreen(LibraryScreen.class);
         finish();
     }
 
