@@ -1,0 +1,78 @@
+[Title]The Quest of Detergent
+[Author]Brian Wright
+[Description]Play the dashing adventure of the Frenchman Detergent and his nemisis Costco enterprises.
+
+[start]
+[Text]Detergent your breakfast is Ready!!! screams Mother
+*Go eat breakfast*[1] *Put on clothes*[2] **[end] **[2]
+
+[1]
+[Text]Here's your breakfast. says mother    I need you to go to Costco and pickup food because you eat it all. Maybe one day you can actually get a job at Costco and provide for this family instead 
+of trying to sell your worthless boardgame.
+*complain and stand up for your boardgame*[4] *Leave in shame like the worthless frenchman you are*[3] **[3] **[]
+
+[2]
+[Text]Great you have some self-respect.
+*Go eat breakfast in clothes*[1] **[end] **[1] **[2]
+
+[3]
+[Text]Costco has become the number one store for all consumer needs in the year 2013. All other stores have submitted to the will of Costco as the only Coorperation.
+The World Governments have recognized Costco as their provider for the needs of all citizens.
+    You arrive at Costco and notice some workers hauling a mysterious crate toward the Outdoors section.
+*Go do what mom wants and get groceries reluctantly*[5] *Follow the workers to the Outdoors section*[end] **[1] **[2]
+
+[4]
+[Text] This board is going to change the World! It's got fake money and fake dice!
+Mother still seems unimpressed. Don't worry you stil know your boardgame is amazing.
+*Leave for Costco with a glimmer of dignity left*[3] **[end] **[1] **[2]
+
+[5]
+[Text] The groceries look great but you see your high-school bully looking a proteing bars and redbull. But wait! he's standing near a warning post that says Caution: wet spot. There's 
+also this really sharp looking pineapple. Really anything looks like a weapon at this point. Can you finally stand up to him and beat him in the middle of a grocery store?
+*Go up and tackle him at the wet spot*[6] *Throw a pineapple at him*[7] **[1] **[2]
+
+[6]
+[Text] You tackle this man you haven't seen for 5 years and get him on the ground and start beating him with your fists and any groceries you can grab. Oh god why did you just do that. He looks up at you
+with his broken nose and says sorry man. You stop and reflect on your foolish actions for a split second but then the bully uppercuts you and starts throwing awesome haymakers at your face. Oh god its just 
+like high-school. Everyone in the grocery store starts cheering for the bully as you get pummeled. Eventually Costco security arrives and grabs you both and takes you to Costco Jail inc.
+*Swallow your pride and get hauled to Costco Jail inc*[11] **[end] **[1] **[2]
+
+
+[7]
+[Text]You throw the pineapple. You really thought that would work? I mean they are kinda pokey and all but really? The bully turns in anger and starts throwing haymakers at your face like back in high-school.
+Eventually Costco Security stops the absolute beatdown and grabs you both and takes you to Costco Jail inc.
+*Get hauled to Costco Jail inc feeling foolish*[11] **[end] **[1] **[2]
+
+[8]
+[Text] You see the workers hauling this mysterious crate to a large door that goes to the warehouse. One of the workers types in a code into a panel next to the door.
+There's a hockey puck at your feet that you could possibly use to lodge the door open as they leave. But I mean you're not the adventurous type or anything right?
+*Try your luck and use hockeypuck*[9] *Go to the grocery section like mommy said*[5] **[1] **[2]
+
+[9]
+[Text]You run as fast as you can and launch the hockeypuck into the doorframe. Somehow it actually worked and now everyone in the department is looking at you not knowing whether to think
+you're awesome or not. It's a really uncomfortable atmosphere int the Outdoors department so you slink away into the warehouse hoping no one follows you. You see the workers hauling the crate to a stage
+next to a lot of other large mysterious crates. You see one of those air vents that are in every  spy movie that overlooks the stage. 
+*Stand there like a dumb deer at night*[10] *Jump into the vent*[12] **[1] **[2]
+
+[10]
+[Text]Two employees walk into the warehouse and say 'Go buy groceries or something you dumb kid! I bet you have a stupid name like Detergent or something.' They promptly pick you up and haul you away.
+*I guess you're going to get groceries now.*[5] **[end] **[1] **[2]
+
+[102]
+[Text]Two employees walk in and say 'Go buy outdoor goods or something you dumb kid! I bet you have a stupid name like Detergent or something.' They promptly pick you up and haul you away.
+*I guess you're going to get outdoors stuff now.*[8] **[end] **[1] **[2]
+
+[11]
+[Text]The Jail is pretty nice. Costco even put some ads inside the cell. Costco only advertises themselves in this day and age so it seems kind of redundant. You see the workers from earlier hauling a 
+mysterious crate onto a stage nearby. There seems to be some sort of gathering. Miraculously the guards leave your cell unlocked. There also seems to be one of those cool airducts that you see in spy
+movies nearby.
+*Walk out of your cell and go to the stage*[102] *Jump in the vent*[12] **[1] **[2]
+
+[12]
+[Text] Costco Employees start gathering and start opening the crates. The crates are full of automatic weapons and ammo. One Costco employee named Greg, who seems to be a manager, stands up 
+and begins to give a speech. 'Alright guys we're gonna start doing that thing we talked about. Lets Go take Over the government and the world! Unless you guys want to wait another day or something.'
+Overwhelmed with this new knowledge you're determined to react. I mean Costco's been bullying you all day... probably.
+*Jump out of the vent*[end] **[end] **[1] **[2]
+[end]
+[Text] Thanks for playing the prologue of The Adventure of Detergent.
+[/story]
