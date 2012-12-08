@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 import android.content.res.AssetManager;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,8 +23,8 @@ import sofia.widget.ListView;
  */
 public class LibraryScreen extends Screen {
 
-    private Library lib;
-    private ListView<String> library;
+    private Library libraryList;
+    private ListView<String> libraryView;
 
     // ----------------------------------------------------------
     /**
@@ -33,8 +32,8 @@ public class LibraryScreen extends Screen {
      */
     public void initialize()
     {
-        lib = new Library();
-        
+        libraryList = new Library();
+
         ArrayList<Map<String, String>> storyList = new ArrayList<Map<String, String>>();
 
         AssetManager assets = this.getAssets();
@@ -44,7 +43,7 @@ public class LibraryScreen extends Screen {
             for (int i = 0; i < storyFiles.length; i++)
             {
                 InputStream inputStream = assets.open(storyFiles[i]);
-                lib.importStory(new Import(inputStream));
+                libraryList.importStory(new Import(inputStream));
             }
 
         }
@@ -54,31 +53,32 @@ public class LibraryScreen extends Screen {
         }
 
 
-        for(int i = 0; i < lib.size(); i++)
+        for(int i = 0; i < libraryList.size(); i++)
         {
             Map<String, String> storyInfo = new HashMap<String, String>();
-            storyInfo.put("Title", lib.getStory(i).getTitle());
-            storyInfo.put("Description", lib.getStory(i).getDescription());
+            storyInfo.put("Title", libraryList.getStory(i).getTitle());
+            storyInfo.put("Description", libraryList.getStory(i).getDescription());
             storyList.add(storyInfo);
         }
 
-        library = new ListView<String>(this);
-        
+        libraryView = new ListView<String>(this);
+
+        //Fill in the library listview
         SimpleAdapter adapter = new SimpleAdapter(this, storyList,
                 android.R.layout.simple_list_item_2,
                 new String[] {"Title", "Description"},
                 new int[] {android.R.id.text1,
                            android.R.id.text2});
 
-        library.setAdapter(adapter);
+        libraryView.setAdapter(adapter);
 
-        library.setOnItemClickListener(new OnItemClickListener() {
+        libraryView.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                 int position, long id) {
-                presentScreen(PlayScreen.class, lib.getStory(position));
+                presentScreen(PlayScreen.class, libraryList.getStory(position));
             }
         });
 
-        setContentView(library);
+        setContentView(libraryView);
     }
 }
