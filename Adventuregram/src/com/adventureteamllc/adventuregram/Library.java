@@ -1,8 +1,5 @@
 package com.adventureteamllc.adventuregram;
 
-import java.io.IOException;
-import android.content.Context;
-import android.content.res.AssetManager;
 import java.util.ArrayList;
 
 // -------------------------------------------------------------------------
@@ -28,18 +25,6 @@ public class Library
 
     // ----------------------------------------------------------
     /**
-     * Uses the Import class to create a story object and then save it in the
-     * library
-     * @param file Path of the file to be parsed
-     */
-    public void importStory(String file)
-    {
-        Import story = new Import(file);
-        library.add(story);
-    }
-
-    // ----------------------------------------------------------
-    /**
      * Adds an import object to the library
      * @param importedStory Import object to be added
      */
@@ -48,34 +33,9 @@ public class Library
         library.add(importedStory);
     }
 
-
     // ----------------------------------------------------------
     /**
-     * Imports all the default stories in the assets folder
-     * @param myContext Context of the android application
-     */
-    public void importStoriesFromAssets(Context myContext) {
-        //Find all of the text files that presumably hold stories
-        AssetManager assets = myContext.getAssets();
-        String[] storyFiles = null;
-        try
-        {
-            storyFiles = assets.list(""); //Change this if stories are put into a sub folder
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-        for (int i = 0; i < storyFiles.length; i++) {
-            importStory(storyFiles[i]);
-        }
-
-    }
-
-    // ----------------------------------------------------------
-    /**
-     * Returns a list of stories that have been parsed
+     * Returns a list of Import objects that have been parsed
      * @return An ArrayList of stories
      */
     public ArrayList<Import> getLibrary()
