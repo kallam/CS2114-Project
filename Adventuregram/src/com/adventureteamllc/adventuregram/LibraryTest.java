@@ -17,7 +17,7 @@ public class LibraryTest extends student.TestCase
     public void setUp() {
         library = new Library();
         Story quest = new Story("Attack of the Clones");
-        library.importStory(quest);
+//        library.importStory(quest);
     }
 
     // ----------------------------------------------------------
@@ -26,7 +26,7 @@ public class LibraryTest extends student.TestCase
      */
     public void testAddRemove() {
         Story quest = new Story("A New Hope");
-        library.importStory(quest);
+//        library.importStory(quest);
         library.removeStory(1);
         assertEquals(1, library.size());
     }
@@ -37,7 +37,7 @@ public class LibraryTest extends student.TestCase
      */
     public void testGetLibrary() {
         Story quest = new Story("A New Hope");
-        library.importStory(quest);
+//        library.importStory(quest);
         assertEquals(quest, library.getLibrary().get(1));
     }
 

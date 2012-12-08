@@ -31,28 +31,18 @@ public class LibraryScreen extends Screen {
     public void initialize()
     {
         lib = new Library();
-        Story story = new Story("hey");
-        lib.importStory(story);
-        story = new Story ("ya");
-        lib.importStory(story);
-        story = new Story ("jurassic");
-        lib.importStory(story);
 
         AssetManager assets = this.getAssets();
         try
         {
             InputStream inputStream = assets.open("TestStoryBeta.txt");
-            lib.importStory(new Import(inputStream).getStory());
+            lib.importStory(new Import(inputStream));
         }
         catch (IOException e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
-
 
         titles = new String[lib.size()];
 

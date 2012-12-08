@@ -38,6 +38,11 @@ public class Library
         library.add(story);
     }
 
+    public void importStory(Import importedStory)
+    {
+        library.add(importedStory);
+    }
+
 
     // ----------------------------------------------------------
     /**
