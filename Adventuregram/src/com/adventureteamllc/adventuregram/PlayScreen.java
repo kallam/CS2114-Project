@@ -1,5 +1,7 @@
 package com.adventureteamllc.adventuregram;
 
+import android.view.View;
+import android.graphics.Color;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.Toast;
@@ -41,7 +43,7 @@ public class PlayScreen extends Screen {
     {
         if (story != null)
         {
-            exitLibrary.setText("Quit");
+            exitLibrary.setText("Library");
             adventure = story;
             choices = new Button[4];
             choices[0] = choice1;
@@ -59,11 +61,13 @@ public class PlayScreen extends Screen {
                 {
                     choices[i].setClickable(true);
                     choices[i].setText(currentEvent.getCommand(i).getName());
+                    choices[i].setVisibility(View.VISIBLE);
                 }
                 else
                 {
                     choices[i].setText("");
                     choices[i].setClickable(false);
+                    choices[i].setVisibility(View.INVISIBLE);
                 }
             }
         }
@@ -127,11 +131,15 @@ public class PlayScreen extends Screen {
                 {
                     choices[i].setClickable(true);
                     choices[i].setText(currentEvent.getCommand(i).getName());
+                    choices[i].setVisibility(View.VISIBLE);
+
+
                 }
                 else
                 {
                     choices[i].setText("");
                     choices[i].setClickable(false);
+                    choices[i].setVisibility(View.INVISIBLE);
                 }
             }
         }
@@ -150,6 +158,7 @@ public class PlayScreen extends Screen {
             for (int i = 0; i < 4; i++)
             {
                 choices[i].setClickable(false);
+                choices[i].setVisibility(View.INVISIBLE);
             }
             //finish();
         }
@@ -160,6 +169,7 @@ public class PlayScreen extends Screen {
      */
     public void exitLibraryClicked()
     {
+
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -176,9 +186,12 @@ public class PlayScreen extends Screen {
             }
         };
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
-            .setNegativeButton("No", dialogClickListener).show();
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+                .setNegativeButton("No", dialogClickListener).show();
+
+
 
 
     }
