@@ -25,7 +25,6 @@ import sofia.widget.ListView;
 public class LibraryScreen extends Screen {
 
     private Library lib;
-    private String[] titles;
     private ListView<String> library;
 
     // ----------------------------------------------------------
@@ -51,11 +50,9 @@ public class LibraryScreen extends Screen {
         }
         catch (IOException e)
         {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-        titles = new String[lib.size()];
 
         for(int i = 0; i < lib.size(); i++)
         {
@@ -73,8 +70,6 @@ public class LibraryScreen extends Screen {
                 new int[] {android.R.id.text1,
                            android.R.id.text2});
 
-//        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,
-//            android.R.layout.simple_list_item_1, titles);
         library.setAdapter(adapter);
 
         library.setOnItemClickListener(new OnItemClickListener() {
