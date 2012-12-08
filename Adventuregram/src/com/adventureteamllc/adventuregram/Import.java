@@ -158,7 +158,9 @@ public class Import
 
     private void constructStory()
     {
-        storyOfEvents = new Story(title);
+        storyOfEvents = new Story(this.getTitle());
+        storyOfEvents.setAuthor(this.getAuthor());
+        storyOfEvents.setDescription(this.getDescription());
         buildEvents(story);
     }
 
