@@ -41,6 +41,7 @@ public class PlayScreen extends Screen {
     {
         if (story != null)
         {
+            exitLibrary.setText("Quit");
             adventure = story;
             choices = new Button[4];
             choices[0] = choice1;
