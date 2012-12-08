@@ -16,7 +16,7 @@ import sofia.widget.ListView;
  *  @version Dec 3, 2012
  */
 public class LibraryScreen extends Screen {
-	
+
 	private Library lib;
 	private String[] titles;
 	private ListView<String> library;
@@ -40,11 +40,12 @@ public class LibraryScreen extends Screen {
 		for(int i = 0; i < lib.size(); i++)
 		{
 			titles[i] = lib.getStory(i).getTitle();
-		}	
+		}
 
 		library = new ListView<String>(this);
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, titles);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+		    android.R.layout.simple_list_item_1, titles);
 		library.setAdapter(adapter);
 
 		library.setOnItemClickListener(new OnItemClickListener() {
