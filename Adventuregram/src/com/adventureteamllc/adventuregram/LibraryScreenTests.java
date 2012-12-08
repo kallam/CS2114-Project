@@ -43,14 +43,4 @@ public class LibraryScreenTests extends student.AndroidTestCase<LibraryScreen>
         assertEquals(size - 1, library.size());
     }
 
-    // ----------------------------------------------------------
-    /**
-     * Tests getting the library as a list
-     */
-    public void testGetLibrary() {
-        Story quest = new Story("A New Hope");
-//        library.importStory(quest);
-        assertEquals(quest, library.getLibrary().get(1));
-    }
-
 }
