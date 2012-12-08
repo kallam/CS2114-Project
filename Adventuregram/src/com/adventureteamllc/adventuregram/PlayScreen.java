@@ -12,8 +12,8 @@ import android.widget.Button;
  *  @author Brian Wright
  *  @version Dec 6, 2012
  */
-public class PlayScreen extends Screen
-{
+public class PlayScreen extends Screen {
+	
     private Button choice1;
     private Button choice2;
     private Button choice3;
@@ -30,6 +30,8 @@ public class PlayScreen extends Screen
         //set storyTitle text and eventDescrip from text file
         //initialize buttons and their text
         //if buttons have no reference then hide or disable them
+    	//storyTitle.setText(story.getTitle());
+
     }
 
     //must advance to next event
@@ -40,15 +42,15 @@ public class PlayScreen extends Screen
      */
     public void choice1Clicked()
     {
-
+    	
     }
     public void choice2Clicked()
     {
-
+    	
     }
     public void choice3Clicked()
     {
-
+ 
     }
     public void choice4Clicked()
     {
