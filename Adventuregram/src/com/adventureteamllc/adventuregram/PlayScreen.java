@@ -1,7 +1,6 @@
 package com.adventureteamllc.adventuregram;
 
 import android.view.View;
-import android.graphics.Color;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.Toast;
@@ -26,7 +25,6 @@ public class PlayScreen extends Screen {
 
     private Button[] choices;
 
-    //opens are you sure? progress won't be saved?
     private Button exitLibrary;
 
     private TextView storyTitle;
@@ -34,6 +32,14 @@ public class PlayScreen extends Screen {
 
     private Event currentEvent;
     private Story adventure;
+
+    /**
+     * Initializes the screen for testing purposes
+     */
+    public void initialize()
+    {
+        this.testerHelper();
+    }
 
     /**
      * Initialize screen elements
@@ -50,8 +56,8 @@ public class PlayScreen extends Screen {
             choices[1] = choice2;
             choices[2] = choice3;
             choices[3] = choice4;
-            currentEvent = story.getEvent("start");
-            storyTitle.setText(story.getTitle());
+            currentEvent = adventure.getEvent("start");
+            storyTitle.setText(adventure.getTitle());
             eventDescription.setText(currentEvent.getDescription());
 
             //initialize buttons
@@ -71,7 +77,6 @@ public class PlayScreen extends Screen {
                 }
             }
         }
-
     }
 
 
@@ -84,6 +89,7 @@ public class PlayScreen extends Screen {
         changeEvent(0);
 
     }
+
     /**
      * Advance choice 2
      */
@@ -92,6 +98,7 @@ public class PlayScreen extends Screen {
         changeEvent(1);
 
     }
+
     /**
      * Advance choice 3
      */
@@ -100,6 +107,7 @@ public class PlayScreen extends Screen {
         changeEvent(2);
 
     }
+
     /**
      * Advance choice 4
      */
@@ -107,10 +115,12 @@ public class PlayScreen extends Screen {
     {
         changeEvent(3);
     }
+
     /**
      * Change Event on screen
+     * @param numEvent the option selected
      */
-    public void changeEvent(int numEvent)
+    private void changeEvent(int numEvent)
     {
         String nextEvent = currentEvent.getCommand(numEvent).getTarget();
         //test if last event in story
@@ -151,16 +161,12 @@ public class PlayScreen extends Screen {
 
             Toast.makeText(this, "Thanks for playing "+ adventure.getAuthor()
                 +"'s game! Now go play another.", Toast.LENGTH_LONG).show();
-            choices[0].setText("Thank you");
-            choices[1].setText("for");
-            choices[2].setText("playing");
-            choices[3].setText("this adventure!");
             for (int i = 0; i < 4; i++)
             {
+                choices[i].setText("");
                 choices[i].setClickable(false);
                 choices[i].setVisibility(View.INVISIBLE);
             }
-            //finish();
         }
 
     }
@@ -174,30 +180,78 @@ public class PlayScreen extends Screen {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which){
-                case DialogInterface.BUTTON_POSITIVE:
-                    //Yes button clicked
-                    finish();
-                    break;
+                    case DialogInterface.BUTTON_POSITIVE:
+                        //Yes button clicked
+                        finish();
+                        break;
 
-                case DialogInterface.BUTTON_NEGATIVE:
-                    //No button clicked
-                    break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        //No button clicked
+                        break;
                 }
             }
         };
 
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
-                .setNegativeButton("No", dialogClickListener).show();
-
-
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+        .setNegativeButton("No", dialogClickListener).show();
 
     }
-    public Event getCurrentEvent()
+
+    // ----------------------------------------------------------
+    /**
+     * Creates a testable play screen
+     */
+    private void testerHelper()
     {
-        return currentEvent;
+        Story something = new Story("Something");
+        something.setAuthor("Test");
+        something.setDescription("Test Des");
+        Event eve = new Event("start", "Some text.");
+        eve.addCommand(new Command("NEXT", "1"));
+        eve.addCommand(new Command("END", "end"));
+
+        something.addEvent(eve.getTitle(), eve);
+
+        eve = new Event("1", "Some other text.");
+        eve.addCommand(new Command("OVER", "end"));
+        eve.addCommand(new Command("END", "end"));
+        eve.addCommand(new Command("DONE", "end"));
+        eve.addCommand(new Command("COMPLETE", "end"));
+
+        something.addEvent(eve.getTitle(), eve);
+
+        eve = new Event("end", "fin");
+
+        something.addEvent(eve.getTitle(), eve);
+
+        exitLibrary.setText("Library");
+        adventure = something;
+        choices = new Button[4];
+        choices[0] = choice1;
+        choices[1] = choice2;
+        choices[2] = choice3;
+        choices[3] = choice4;
+        currentEvent = adventure.getEvent("start");
+        storyTitle.setText(adventure.getTitle());
+        eventDescription.setText(currentEvent.getDescription());
+
+        //initialize buttons
+        for (int i = 0; i < 4; i++)
+        {
+            if (currentEvent.getCommand(i) != null  && !currentEvent.getCommand(i).getName().equals(""))
+            {
+                choices[i].setClickable(true);
+                choices[i].setText(currentEvent.getCommand(i).getName());
+                choices[i].setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                choices[i].setText("");
+                choices[i].setClickable(false);
+                choices[i].setVisibility(View.INVISIBLE);
+            }
+        }
     }
 
 }
