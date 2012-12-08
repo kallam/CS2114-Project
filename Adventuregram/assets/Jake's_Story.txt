@@ -1,0 +1,142 @@
+[Title]Jake's Story
+[Author]Jake Sperlazza
+[Description]A tale of dragons and revenge!
+
+[start]
+[Text]You find yourself running through a forest. When suddenly a dragon
+ appears! Wow, a boss battle this early? What dost thou do?
+*RUN*[1] *RIDE THE DRAGON!*[ride] *FIGHT!*[battle] *NOTHING*[]
+
+[1]
+[Text]C'mon, don't be a chump...
+*OKAY...*[start] **[] **[] **[]
+
+[ride]
+[Text]But it's pointy! Ouch....
+*GO BACK*[start] **[] **[] **[]
+
+[battle]
+[Text]Dragon HP: 100/100. The dragon wonders why we have to fight
+ and can't all get along.
+*SCREW THAT. USE SWORD*[battle1] *BLOCK*[battle1.1] *PONDER*[] *AGREE TO DISAGREE*[battleend1]
+
+[battle1]
+[Text]Dragon HP: 75/100. You jump as high as you can. The training at the
+ medieval combat academy is really paying off. You perform a sick spinning sword
+ attack that deals 25 damage. As you land the dragon swings his tail at you!
+*ROLL OUTTA THERE*[battle2] *TAKE IT LIKE A MAN*[battle1dead] **[] **[]
+
+[battle1.1]
+[Text]It doesn't look like block will do much. You've got to be quick and
+ aggressive to win this fight!
+*USE SWORD*[battle1] **[] **[] **[]
+
+[battle2]
+[Text]Dragon HP: 75/100. Zip, zop! You roll with the quickness and just manage
+ to evade the dragon's fury. The dragon is off balance! Now is your time to
+ strike back.
+*DON'T STRIKE BACK*[battle3.1] *STRIKE BACK*[battle3] *BLOCK*[battle1.1] *DO NOTHING*[]
+
+[battle1dead]
+[Text]Well, uh, apparantly you are not as manly as you originally thought.
+ The dragon hits you right in the face with his spikey tail. You announce that
+ "That really hurt!" and run away crying. Embarrassing...
+*TRY THAT ONE AGAIN*[battle1] **[] **[] **[]
+
+[battle3.1]
+[Text]Way to squander that great oppotunity to strike back. Now you're not sure
+ what to do. What do you do?
+*NOT SURE*[] *FINE, STRIKE BACK*[battle3] **[] **[]
+
+[battle3]
+[Text]Dragon HP: 1/100. Monster critical hit! The dragon is nearly dead and is
+ just sitting there, helpless.
+*HELP THE POOR CHAP OUT*[battleend] *KILL 'EM!*[battle3.2] **[] **[]
+
+[battle3.2]
+[Text]Well, that wouldn't be very nice now would it?
+*YEAH FINE, HELP HIM OUT*[battleend] **[] **[] **[]
+
+[battleend1]
+[Text]You and the dragon agree to set aside your differences and work together.
+ Seems like a nice creature. The dragon asks, "So, what are you doing here anyway?"
+*"I could ask you the same."*[dialog1] *"I'm running away from town, you"*[dialog2]
+ **[] **[]
+
+[battleend]
+[Text]The dragon is forever grateful for sparing its life. The dragon asks,
+ "So, what are you doing here anyway?"
+*"I could ask you the same."*[dialog1] *"I'm running away from town, you"*[dialog1]
+**[] **[]
+
+[dialog1]
+[Text]He replies, "Well I was just flying around, minding my own business,
+ right? So then some hunters start shooting fire arrows at me." You suspect
+ you know who the hunters are, but keep that to yourself for now. He continues,
+ "Apparantly my hide is worth a lot or something. Darn ladies have to have their
+ dragon-leather purses and such. But anyway enough about me, how about your 
+ story?"
+*TELL YOUR STORY*[dialog2] **[] **[] **[]
+
+[dialog2]
+[Text]You begin, "It all started when I was sitting in my peaceful town of
+ Peasantown just a few months ago. We were a simple folk with not much to offer
+ but a good home and good food. But then suddenly the town was overrun by a
+ group of crazed individuals. They overthrew our government and forced everyone
+ to work for them. Most people in the village had no fight in them. They blindy
+ accepted their new leaders. This included my parents. I, however, hated the new
+ leadership. It was all work and no play anymore. It was like they enslaved the
+ whole town, but I weas completely against it. But my parents disowned me,
+ so I ran away and decided to never return to that place."
+*Continue*[dialog3] **[] **[] **[]
+
+[dialog3]
+[Text]"Oh also, I think I may know who has been hunting dragons in these parts."
+ you add. The dragon is intrigued. "Oh really?" he asks. You tell him that the
+ poachers worked for the new government and you were against their ways, because
+ you don't think dragons should be killed like that for no reason. "Alright,
+ let's go get revenge on those poachers and purge the town of your new fascist
+ government!", the dragon suggests.
+*"Well, I dont know.."*[dialog3.1] *LET'S DO IT, KICK BUTT AND TAKE NAMES*[revenge] **[] **[]
+
+[dialog3.1]
+[Text]The dragon pleads, "Oh pleasee. I really wanna burn down some evil people
+ today!" 
+*ALRIGHT FIRE! YEAH SURE, LET'S DO IT*[] **[] **[] **[]
+
+[revenge]
+[Text]You hop on the dragon. He shows you how to mount him while avoid his scary
+ spikes. You are now riding a dragon to go save your village and destroy the
+ evil people! You feel like a boss at this moment. After a short journey you
+ arrive at the evil government headquarters.
+*NO SURVIVORS. BURN IT DOWN*[burn] *DISCUSS MATTERS WITH CIVILITY*[discuss] **[] **[]
+
+[burn]
+[Text]You and dragon begin taking revenge against the evil peoples. The dragon's
+ fire scorches everything in sight. Thankfully, there's no one around that you
+ care about such as your family. So only the bad people are burning. MWAHAHAHA!
+*CONTINUE*[finale] **[] **[] **[]
+
+[discuss]
+[Text]Well before you could even approach diplomatically, the poachers come out
+ and begin firing at the dragon with greed in their eyes. Now they've pissed
+ you off.
+*KILL 'EM ALL*[burn] **[] **[] **[]
+
+[finale]
+[Text]After you finish off the last of the evil oppressors, you return to your home
+ to see how everyone is doing. It appears that the government had cast some sort
+ of spell on the village that allowed them to take complete control. You were
+ somehow immune to the spell, of course. Your family and the whole village thank
+ you and the dragon for your work. Now Peasantown is back to normal, plus you
+ have this awesome dragon to protect you from further attacks! Yay!
+*Phew, is that it?*[end] **[] **[] *DO NOT CLICK*[secret]
+
+[secret]
+[Text]Woah you sure are a rebel aren't you? Watch out for this guy he ignored
+ text on a button, wow.
+*I GET IT, GO BACK*[finale] **[] **[] **[]
+
+[end]
+[Text]Thanks for playing, I hope it was bearable!
+[/story]
