@@ -51,6 +51,8 @@ public class PlayScreen extends Screen {
             currentEvent = story.getEvent("start");
             storyTitle.setText(story.getTitle());
             eventDescription.setText(currentEvent.getDescription());
+
+            //initialize buttons
             for (int i = 0; i < 4; i++)
             {
                 if (currentEvent.getCommand(i) != null  && !currentEvent.getCommand(i).getName().equals(""))
@@ -68,8 +70,7 @@ public class PlayScreen extends Screen {
 
     }
 
-    //must advance to next event
-    //check if event is the last
+
     /**
      * Advance story with this choice
      * choice1 should always be an option
@@ -79,17 +80,25 @@ public class PlayScreen extends Screen {
         changeEvent(0);
 
     }
-
+    /**
+     * Advance choice 2
+     */
     public void choice2Clicked()
     {
         changeEvent(1);
 
     }
+    /**
+     * Advance choice 3
+     */
     public void choice3Clicked()
     {
         changeEvent(2);
 
     }
+    /**
+     * Advance choice 4
+     */
     public void choice4Clicked()
     {
         changeEvent(3);
@@ -111,6 +120,7 @@ public class PlayScreen extends Screen {
             choices[1] = choice2;
             choices[2] = choice3;
             choices[3] = choice4;
+
             for (int i = 0; i < 4; i++)
             {
                 if (currentEvent.getCommand(i) != null && !currentEvent.getCommand(i).getName().equals("") )
@@ -127,6 +137,7 @@ public class PlayScreen extends Screen {
         }
         else
         {
+            //end case display ending message
             currentEvent = adventure.getEvent("end");
             eventDescription.setText(currentEvent.getDescription());
 
