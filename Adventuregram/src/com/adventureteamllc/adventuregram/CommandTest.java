@@ -6,14 +6,21 @@ import junit.framework.TestCase;
 /**
  *  Tests the Command Class
  *
- *  @author Alex
- *  @version Dec 7, 2012
+ *  @author Alex Kallam
+ *  @author Brian Wright
+ *  @author Chris Hoffman
+ *  @author Jake Sperlazza
+ *  @version Dec 8, 2012
  */
 public class CommandTest extends TestCase
 {
     private Command goAway;
 
-    public void setUp() {
+    /**
+     * Runs before every Test case.
+     */
+    public void setUp()
+    {
         goAway = new Command("Tell them to go away", "end");
     }
 

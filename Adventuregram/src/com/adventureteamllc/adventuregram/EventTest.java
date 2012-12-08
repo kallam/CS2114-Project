@@ -1,19 +1,16 @@
 package com.adventureteamllc.adventuregram;
-//import static org.junit.Assert.*;
-//import org.junit.Test;
-
 
 import junit.framework.TestCase;
 /**
- * // -------------------------------------------------------------------------
-/**
- *  Test Event Class
+ *  Test Event Class.
  *
- *  @author Brian
- *  @version Nov 30, 2012
+ *  @author Brian Wright
+ *  @author Alex Kallam
+ *  @author Chris Hoffman
+ *  @author Jake Sperlazza
+ *  @version Dec 8, 2012
  */
-public class EventTest
-    extends TestCase
+public class EventTest extends TestCase
 {
 
     private Event event;
@@ -37,13 +34,8 @@ public class EventTest
         assertEquals("title", event.getTitle());
         event.addCommand(command);
         assertEquals(1, event.getNumConnections());
-      //  assertFalse(event.isEnd());
-       // event.setEnd();
-      //  assertTrue(event.isEnd());
         assertEquals(command, event.getCommand(0));
         assertNull(event.getCommand(5));
     }
-
-
 }
 

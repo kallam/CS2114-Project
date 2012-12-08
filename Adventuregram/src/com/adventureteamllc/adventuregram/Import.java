@@ -11,6 +11,9 @@ import java.util.*;
  *  Then can build a story from the associated text.
  *
  *  @author Chris Hoffman
+ *  @author Alex Kallam
+ *  @author Brian Wright
+ *  @author Jake Sperlazza
  *  @version Dec 8, 2012
  */
 public class Import

@@ -3,12 +3,14 @@ package com.adventureteamllc.adventuregram;
 import java.util.HashMap;
 
 /**
- * // -------------------------------------------------------------------------
-/**
- * Collection of Events stored in an arrayList to represent total story
+ * Collection of Events stored in an HashMap to represent whole story. Includes
+ * the name of the story, the story's description, and the name of the author.
  *
  *  @author Brian Wright
- *  @version Nov 25, 2012
+ *  @author Alex Kallam
+ *  @author Chris Hoffman
+ *  @author Jake Sperlazza
+ *  @version Dec 8, 2012
  */
 public class Story
 {
@@ -35,6 +37,7 @@ public class Story
     {
         title = newTitle;
     }
+
     /**
      * Gets the String
      * @return String title to return
@@ -43,6 +46,7 @@ public class Story
     {
         return title;
     }
+
     /**
      * Add an event to the map
      * @param id String id of event
@@ -50,9 +54,7 @@ public class Story
      */
     public void addEvent(String id, Event event)
     {
-        //events.add(ev);
         map.put(id, event);
-
     }
 
     // ----------------------------------------------------------
@@ -60,7 +62,8 @@ public class Story
      * Sets the author of the story
      * @param author Name of the story's author
      */
-    public void setAuthor(String author) {
+    public void setAuthor(String author)
+    {
         this.author = author;
     }
 
@@ -69,7 +72,8 @@ public class Story
      * Sets the description of the story
      * @param description of the story
      */
-    public void setDescription(String description) {
+    public void setDescription(String description)
+    {
         this.description = description;
     }
 
@@ -78,7 +82,8 @@ public class Story
      * Gets the author's name
      * @return Author's name
      */
-    public String getAuthor() {
+    public String getAuthor()
+    {
         return author;
     }
 
@@ -87,14 +92,10 @@ public class Story
      * Gets the description of the story
      * @return Description of the story
      */
-    public String getDescription() {
+    public String getDescription()
+    {
         return description;
     }
-
-//    public int getNumEvents()
-//      {
-//     return map.size();
-//    }
 
     /**
      * get an Event
@@ -105,7 +106,5 @@ public class Story
     {
         return map.get(id);
     }
-
-
 
 }

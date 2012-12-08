@@ -2,10 +2,14 @@ package com.adventureteamllc.adventuregram;
 
 // -------------------------------------------------------------------------
 /**
- *  Command object that points to the next event
+ *  Command object that points to the next event. Holds a Command id and
+ *  a target Command's id
  *
- *  @author Brian
- *  @version Dec 3, 2012
+ *  @author Brian Wright
+ *  @author Alex Kallam
+ *  @author Chris Hoffman
+ *  @author Jake Sperlazza
+ *  @version Dec 8, 2012
  */
 public class Command
 {

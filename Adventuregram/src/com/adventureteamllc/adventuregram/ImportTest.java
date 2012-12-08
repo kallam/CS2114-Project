@@ -5,6 +5,9 @@ package com.adventureteamllc.adventuregram;
  *  Tests Import.
  *
  *  @author Chris Hoffman
+ *  @author Alex Kallam
+ *  @author Brian Wright
+ *  @author Jake Sperlazza
  *  @version Dec 8, 2012
  */
 public class ImportTest extends junit.framework.TestCase
