@@ -35,8 +35,13 @@ public class LibraryScreen extends Screen {
         AssetManager assets = this.getAssets();
         try
         {
-            InputStream inputStream = assets.open("TestStoryBeta.txt");
-            lib.importStory(new Import(inputStream));
+            String[] storyFiles = assets.list("");
+            for (int i = 0; i < storyFiles.length; i++)
+            {
+                InputStream inputStream = assets.open(storyFiles[i]);
+                lib.importStory(new Import(inputStream));
+            }
+
         }
         catch (IOException e)
         {
