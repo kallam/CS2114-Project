@@ -28,6 +28,7 @@ public class LibraryScreen extends Screen {
 
     private Library libraryList;
     private ListView<String> libraryView;
+    private SimpleAdapter  adapter;
 
     // ----------------------------------------------------------
     /**
@@ -68,11 +69,12 @@ public class LibraryScreen extends Screen {
         libraryView = new ListView<String>(this);
 
         //Fill in the library listview
-        SimpleAdapter adapter = new SimpleAdapter(this, storyList,
+        adapter = new SimpleAdapter(this, storyList,
             android.R.layout.simple_list_item_2,
             new String[] {"Title", "Description"},
             new int[] {android.R.id.text1,
             android.R.id.text2});
+
 
         libraryView.setAdapter(adapter);
 
@@ -88,11 +90,11 @@ public class LibraryScreen extends Screen {
 
     // ----------------------------------------------------------
     /**
-     * Gets the Library that holds the list of stories
-     * @return libraryList of stories
+     * Gets the Adapter that populates the listview
+     * @return adapter holding story info
      */
-    public Library getLibraryList() {
-        return libraryList;
+    public SimpleAdapter getAdapter() {
+        return adapter;
     }
 
 }

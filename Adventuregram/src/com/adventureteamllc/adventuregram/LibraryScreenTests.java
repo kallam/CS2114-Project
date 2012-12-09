@@ -1,5 +1,8 @@
 package com.adventureteamllc.adventuregram;
 
+import java.util.HashMap;
+import android.widget.SimpleAdapter;
+
 // -------------------------------------------------------------------------
 /**
  *  Tests various functions of the library
@@ -14,7 +17,7 @@ package com.adventureteamllc.adventuregram;
 public class LibraryScreenTests extends student.AndroidTestCase<LibraryScreen>
 {
 
-    private Library library;
+    private SimpleAdapter library;
 
     // ----------------------------------------------------------
     /**
@@ -27,20 +30,25 @@ public class LibraryScreenTests extends student.AndroidTestCase<LibraryScreen>
 
     public void setUp()
     {
-        library = getScreen().getLibraryList();
+        library = getScreen().getAdapter();
     }
 
     // ----------------------------------------------------------
     /**
-     * Tests removing stories to the library
+     * Place a description of your method here.
      */
-    public void testRemoveStory()
-    {
-        int size = library.size();
-        if (size > 0) {
-            library.removeStory(0);
-        }
-        assertEquals(size - 1, library.size());
+    public void testAdapterSize() {
+        assertEquals(5, library.getCount());
+    }
+
+    // ----------------------------------------------------------
+    /**
+     * Place a description of your method here.
+     */
+    public void testAdapterContent() {
+        //Gets first story from assets - Alex's story
+        HashMap<String, String> map = (HashMap<String, String>)library.getItem(0);
+        assertEquals("\"Life of a CS Major\" by Alex Kallam", map.get("Title"));
     }
 
 }
