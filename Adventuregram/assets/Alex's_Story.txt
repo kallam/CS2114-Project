@@ -1,0 +1,75 @@
+[Title]Life of CS Major
+[Author]Alex Kallam
+[Description]Follows the events of an average CS major the night before a project is due.
+
+[start]
+[Text]It is the middle of the afternoon and you have a project to work on. You've had weeks to start, but you keep putting it off. It is due at 8AM tomorrow morning.
+*Play some videogames*[1]*Sit down and start working*[2]*Take a nap*[3]*Waste time by telling people how screwed you are*[4]
+
+[1]
+[Text]You had hoped that you would have some inspiration while gaming, but none has come and you have wasted a lot of time.
+*Sit down and start working*[2]*Take a nap*[3]*Open up Eclipse on your computer and then start browsing reddit*[5]
+
+[2]
+[Text]You tried to start working, but you keep messing with your Pandora station and then got distracted by Facebook.
+*Unplug your ethernet cord so that you can start working*[6]*Go to DX and get some brain food*[7]**[]**[]
+
+[3]
+[Text]Now that you feel well rested, you figure it is about time to start on your project. Oh, and it is almost midnight.
+*Frantically hop on your computer and start working*[8]*Go to DX and get some brain food*[7]**[]**[]
+
+[4]
+[Text]Everyone has heard your plight and sympathizes, but you still have gotten nothing done yet.
+*Sit down and start working*[2]]*Open up Eclipse on your computer and then start browsing reddit*[5]*Go to DX and get some brain food*[7]**[]
+
+[5]
+[Text]You have seen a lot of totally awesome cat videos, but you still haven't gotten anything done.
+*Unplug your ethernet cord so that you can start working*[6]*Go to DX and get some brain food*[7]**[]**[]
+
+[6]
+[Text]Shortly after going offline and trying to work, you realized that you can't possibly finish this project without StackOverflow.
+*Plug back in and exercise your willpower*[8]*Plug back in and check Facebook for just one minute*[9]**[]**[]
+
+[7]
+[Text]After returning from DX,  you have a semi-full(but queasy) belly and are ready to get to work.
+*Sit down and start your work*[8]*Check your Facebook momentarily before getting to work*[9]**[]**[]
+
+[8]
+[Text]You managed to create the project folder, but not much else has gotten done.
+*Read the assignment and start from there*[10]*Check your Facebook momentarily before continuing to work*[9]**[]**[]
+
+[9]
+[Text]You take care of all your Facebook notifications and log out, but then realize that it is 2AM.
+*Drink a ton of coffee and start working*[11]*Eh, one assignment gets dropped in the class. Go to bed.*[12]**[]**[]
+
+[10]
+[Text]You get a fair amount of work done, but it won't compile correctly. The error messages tell you absolutely nothing useful.
+*Start searching for your bug*[13]*Eh, one assignment gets dropped in the class. Go to bed.*[12]**[]**[]
+
+[11]
+[Text]You get a large portion of the project done, but due to your extreme exhaustion and caffeinated state, you cannot find the simple mistake in your code that is crashing it.
+*Start sobbing uncontrollably*[14]*Eh, one assignment gets dropped in the class. Go to bed.*[12]**[]**[]
+
+[12]
+[Text]You wake in the middle of the night and know exactly what it is that you need to do to fix your code and finish the project.
+*Get out of bed and finish the program*[15]*Roll back over, go to sleep, and take the zero*[16]**[]**[]
+
+[13]
+[Text]You get going again and are making good progress. As you try to fix a bug, something causes your computer to crash and an insanely long disk check begins as it comes back to life.
+*Start sobbing uncontrollably*[14]*Eh, one assignment gets dropped in the class. Go to bed.*[12]**[]**[]
+
+[14]
+[Text]You wake up at 6AM realizing that you had cried yourself to sleep. Your computer is sitting there ready to go.
+*Fix your bug and slowly finish the project to receive a good grade*[15]*Eh, one assignment gets dropped in the class. Go to bed.*[16]**[]**[]
+
+[15]
+[Text]You finally finish your program. After submitting to Web-Cat, failing, and then submitting again with all your Javadocs, you have received an A!
+*End*[End]**[]**[]**[]
+
+[16]
+[Text]You didn't finish the program and received a zero. But you have avoided a mental breakdown!
+*End*[End]**[]**[]**[]
+
+[End]
+[Text]Whether you managed to pull through and finish your project or not, congratulations on making it through the night!
+[/story]
