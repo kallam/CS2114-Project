@@ -64,12 +64,12 @@
 
 [15]
 [Text]You finally finish your program. After submitting to Web-Cat, failing, and then submitting again with all your Javadocs, you have received an A!
-*End*[End] **[] **[] **[]
+*End*[end] **[] **[] **[]
 
 [16]
 [Text]You didn't finish the program and received a zero. But you have avoided a mental breakdown!
-*End*[End] **[] **[] **[]
+*End*[end] **[] **[] **[]
 
-[End]
+[end]
 [Text]Whether you managed to pull through and finish your project or not, congratulations on making it through the night!
 [/story]
