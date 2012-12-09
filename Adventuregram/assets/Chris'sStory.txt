@@ -1,4 +1,4 @@
-[Title]Rejectous the Space Pirate
+[Title]Space Pirate Rejectous 
 [Author]Chris Hoffman
 [Description]Take on the role of Rejectous the Space Pirate in this Epic Adventure.
 
