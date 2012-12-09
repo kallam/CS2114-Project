@@ -1,0 +1,71 @@
+[Title]Rejectous the Space Pirate
+[Author]Chris Hoffman
+[Description]Take on the role of Rejectous the Space Pirate in this Epic Adventure.
+
+[start]
+[Text]"'Congradulations Space Cadet.' You have just graduated from the United Space Marine Association Academy. You will soon be assigned to a crew and ship ready to depart for the vast reaches of space! Adventure awaits" These words echo in your head. That was five years ago.... You were originally assigned to the USMA DangerField under the command of Admiral Backbar, who was known far and wide for his cruelity to both his crew and his enemies. And three years ago, you assisted in a mutiny aboard the USMA DangerField that led to your best friend, Former Sergeant John Carter, taking up the role as Captain of the ship. Branded as pirates, the USMA actively hunts the former crew of the USMA DangerField. A year ago, John died of a rare form of dysentery and the crew appointed you as the new Captain of the MineField (formally known as the USMA DangerField). And are now at the top of the USMA's Most Wanted list, with a bounty of 200,000,000 rupees on your head. Actively hunted for mutiny and other crimes against the USMA, only you and your crew know the truth behind the mutiny, and will stop at nothing to fix it. After dewelling on your thoughts for awhile, you choose to roll over in your bunk and try to clear your mind.
+*Admiral Ackbar? ITS A TRAP!*[1] *Captain of the MineField? It has a nice ring to it.*[2] *Dysentery? What is this? Oregon Trail?*[3] *WOOO SPACE PIRATE!!!*[2]
+
+[1]
+[Text]No! Admiral BACKBAR! Not Ackbar! Seriously....didn't you actually read the intro?
+*Of course, I read it!*[2] *No.....*[start] *Don't insult my intelligence*[4] **[]
+
+[2]
+[Text]You are stirred suddenly from your sleep, by a knock at the cabin door.
+*I was sleeping.....*[5] *Who's there?*[6] *Come in*[6] **[]
+
+[3]
+[Text]Only if you clicked on Oregon Trail in the Library. Moving on.
+*Continue*[2] **[] **[] **[]
+
+[4]
+[Text]You avoided the the question. Go read the intro again.
+*Continue*[start] **[] **[] **[]
+
+[5]
+[Text]Your first mate, Phil Mcrackin, comes bursting in the door without waiting for a response. "Captain! The USMA Rodney is on our tail! Its only a matter of time before they catch up to us!" But the USMA Rodney is a smaller ship, why would they be after us?
+*Oh no, Battlestations!*[7] *We should see what they want*[8] **[] **[]
+
+[6]
+[Text]You jump off your bunk and open the door to see who it is. Once you open the door, you see your first mate, Phil Mcrackin, with a worried look on his face. You quickly ask him what is going on. "Captain Rejectous! The USMA Rodney is on our tail! Its only a matter of time before they catch up to us! We need to do something quick." he exclaims. Hmm...the USMA Rodney is light ship, surely they aren't after us.
+*Let's get Prepared for Battle*[7] *Relax Phil, lets see what they first*[8] **[] **[]
+
+[7]
+[Text]You order your crew to their battlestations and to await your signal to attack. But before you have the chance to give another order, you hear an explosion and quickly assume that the USMA Rodney was firing on you. You signal the attack. And your Heavy Battle spaceship tears through the USMA Rodney like it was tissue paper. I guess you'll never know what they wanted. Oh well. Guess that means you can go back to bed. You order your crew back to their flight stations and jump back in your bunk and fall back asleep.
+*I guess...I might have screwed up...*[end] *That's it.*[end] **[] **[]
+
+[8]
+[Text]You order Phil to meet you on the bridge in a few minutes and inform the crew to be ready for any action. You quickly go to your desk and grab your laser sword from underneath and then grab you pistol from under your pillow and head towards the bridge. On your way to the bridge you hear a small explosion from the kitchen and find that Chef Vomit's Corn Casserole exploded everywhere. Good thing you didn't mistake that for photon cannon fire. You soon arrive at the bridge. And find your crew waiting for your command.
+*Open a line of Communcation*[9] *Fire Photon Cannons*[10] **[] **[]
+
+[9]
+[Text]INCOMING COMM: "Captain Rejectous of the MineField, my name is Captain Ima I. Diot of the USMA Rodney. While you are a top priority for the USMA, right now we are currently on a top priority mission. Your ship is carrying a stowaway, a young woman. We demand that you hand her over immediately! She is a princess on the Planet GAODS."
+*A princess? Alright! ;)*[10] *You are in no position to be making demands!*[11] *Shut up, USMA scum!*[12] **[]
+
+[10]
+[Text]You order your crew to find the princess and lock her in your quarters, so you can deal with her later. "You won't be getting your hands on her, you space scum!" you exclaim.
+*Eat Photon Cannon*[13] *Die!*[] **[] **[]
+
+[11]
+[Text]"I'll be keeping the princess for myself, USMA dog!" you tell him. "Space Pirate scum!" he curses.
+*Space Pirate scum?*[13] **[] **[] **[]
+
+[12]
+[Text]You order your crew to open fire on the USMA Rodney, with all you have. And before they can even react the entire ship is completely oblierated in under a min. After seeing that their ship is in billons of pieces, you order your crew to find the princess and put her in your quarters for later.
+*Continue*[14] **[] **[] **[]
+
+[13]
+[Text]You fire your photon cannons and lasers killing every man on the ship and leaving nothing but a jagged ball of twisted metal and pastics that once held the ship together. After the enemy ship is no more, you learn from your crew that the princess has been found and locked in your quarters.
+*Continue*[14] **[] **[] **[]
+
+[14]
+[Text]You make your way to your quarters, excited to find out who this princess is, and deal with her. As you approach the door, you hear strange sounds coming from the otherside.
+*Open that door!*[15] *Here comes your hero darling!*[15] *Slowly open the door and peek inside*[15] *Control yourself and enter forcefully.*[15]
+
+[15]
+[Text]Well, thats all I have for now. haha Thanks for getting this far!
+*End*[end] **[] **[] **[]
+
+[end]
+[Text]Thanks for playing! Rejectous the Space Pirate Part 2 will be available eventually....maybe.....
+[/story]
