@@ -14,24 +14,24 @@ import junit.framework.TestCase;
  */
 public class CommandTest extends TestCase
 {
-    private Command goAway;
+	private Command goAway;
 
-    /**
-     * Runs before every Test case.
-     */
-    public void setUp()
-    {
-        goAway = new Command("Tell them to go away", "end");
-    }
+	/**
+	 * Runs before every Test case.
+	 */
+	public void setUp()
+	{
+		goAway = new Command("Tell them to go away", "end");
+	}
 
-    // ----------------------------------------------------------
-    /**
-     * Tests the values of a command to validate the constructor
-     */
-    public void testConstructor() {
-        assertEquals("Tell them to go away", goAway.getName());
-        assertEquals("end", goAway.getTarget());
-    }
+	// ----------------------------------------------------------
+	/**
+	 * Tests the values of a command to validate the constructor
+	 */
+	public void testConstructor() {
+		assertEquals("Tell them to go away", goAway.getName());
+		assertEquals("end", goAway.getTarget());
+	}
 
 
 }

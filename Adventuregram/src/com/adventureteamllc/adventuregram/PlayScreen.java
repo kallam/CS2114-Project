@@ -43,7 +43,7 @@ public class PlayScreen extends Screen {
 
     /**
      * Initialize screen elements
-     * @param story
+     * @param story Story object
      */
     public void initialize(Story story)
     {

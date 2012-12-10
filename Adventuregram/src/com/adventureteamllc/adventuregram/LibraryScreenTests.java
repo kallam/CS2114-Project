@@ -17,38 +17,41 @@ import android.widget.SimpleAdapter;
 public class LibraryScreenTests extends student.AndroidTestCase<LibraryScreen>
 {
 
-    private SimpleAdapter library;
+	private SimpleAdapter library;
 
-    // ----------------------------------------------------------
-    /**
-     * Create a new LibraryScreenTest object.
-     */
-    public LibraryScreenTests()
-    {
-        super(LibraryScreen.class);
-    }
+	// ----------------------------------------------------------
+	/**
+	 * Create a new LibraryScreenTest object.
+	 */
+	public LibraryScreenTests()
+	{
+		super(LibraryScreen.class);
+	}
 
-    public void setUp()
-    {
-        library = getScreen().getAdapter();
-    }
+	public void setUp()
+	{
+		library = getScreen().getAdapter();
+	}
 
-    // ----------------------------------------------------------
-    /**
-     * Place a description of your method here.
-     */
-    public void testAdapterSize() {
-        assertEquals(5, library.getCount());
-    }
+	// ----------------------------------------------------------
+	/**
+	 * Tests the adapter to make sure it is displaying all 
+	 * the stories
+	 */
+	public void testAdapterSize() {
+		assertEquals(5, library.getCount());
+	}
 
-    // ----------------------------------------------------------
-    /**
-     * Place a description of your method here.
-     */
-    public void testAdapterContent() {
-        //Gets first story from assets - Alex's story
-        HashMap<String, String> map = (HashMap<String, String>)library.getItem(0);
-        assertEquals("\"Life of a CS Major\" by Alex Kallam", map.get("Title"));
-    }
+	// ----------------------------------------------------------
+	/**
+	 * Tests the adapter to make sure it causes the ListView to 
+	 * display the right text for the first story
+	 */
+	public void testAdapterContent() {
+		//Gets first story from assets - Alex's story
+		@SuppressWarnings("unchecked")
+		HashMap<String, String> map = (HashMap<String, String>) library.getItem(0);
+		assertEquals("\"Life of a CS Major\" by Alex Kallam", map.get("Title"));
+	}
 
 }
