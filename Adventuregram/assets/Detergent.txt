@@ -1,9 +1,9 @@
-[Title]The Quest of Detergent
+[Title]The Quest of Detergènt
 [Author]Brian Wright
 [Description]Play the dashing adventure of the Frenchman Detergent and his nemisis Costco enterprises.
 
 [start]
-[Text]Detergent your breakfast is Ready!!! screams Mother
+[Text]Detergènt your breakfast is Ready!!! screams Mother
 *Go eat breakfast*[1] *Put on clothes*[2] **[end] **[2]
 
 [1]
@@ -48,6 +48,11 @@ Eventually Costco Security stops the absolute beatdown and grabs you both and ta
 There's a hockey puck at your feet that you could possibly use to lodge the door open as they leave. But I mean you're not the adventurous type or anything right?
 *Try your luck and use hockeypuck*[9] *Go to the grocery section like mommy said*[5] **[1] **[2]
 
+[82]
+[Text] You see the workers hauling this mysterious crate to a large door that goes to the warehouse. One of the workers types in a code into a panel next to the door.
+There's a hockey puck at your feet that you could possibly use to lodge the door open as they leave. But I mean you're not the adventurous type or anything right?
+*Try your luck and use hockeypuck*[9] **[5] **[1] **[2]
+
 [9]
 [Text]You run as fast as you can and launch the hockeypuck into the doorframe. Somehow it actually worked and now everyone in the department is looking at you not knowing whether to think
 you're awesome or not. It's a really uncomfortable atmosphere int the Outdoors department so you slink away into the warehouse hoping no one follows you. You see the workers hauling the crate to a stage
@@ -60,7 +65,7 @@ next to a lot of other large mysterious crates. You see one of those air vents t
 
 [102]
 [Text]Two employees walk in and say 'Go buy outdoor goods or something you dumb kid! I bet you have a stupid name like Detergent or something.' They promptly pick you up and haul you away.
-*I guess you're going to get outdoors stuff now.*[8] **[end] **[1] **[2]
+*I guess you're going to get outdoors stuff now.*[82] **[end] **[1] **[2]
 
 [11]
 [Text]The Jail is pretty nice. Costco even put some ads inside the cell. Costco only advertises themselves in this day and age so it seems kind of redundant. You see the workers from earlier hauling a 
